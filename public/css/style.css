@@ -27,9 +27,17 @@
   white-space: nowrap;
 }
 
+/* Estilizando a primeira letra*/
 .navbar-logo::first-letter {
   color: #e10600;
 }
+
+/* Estilizando a última letra*/
+.navbar-logo .last-letter {
+  display: inline;
+  color: #2200e1; 
+}
+
 
 /* Estilização do menu */
 
