@@ -4,26 +4,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage</title>
+
+    <title>RALLYHUB | Carros Icônicos do Rally</title>
 
     <link rel="stylesheet" href="/css/style.css" />
   </head>
 
   <body>
-    <!-- Incluindo a navbar -->
+    <!-- INcluindo a navbar -->
     <%- include("partials/navbar") %>
 
+    <!-- Incluindo o -->
+    <%- include("partials/header") %>
+
     <main>
-      <h1>Carros mais icônicos do Rally</h1>
+      <section class="cars-section" id="carros">
+        <div class="section-title">
+          <p>AS GRANDES LENDAS</p>
 
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, quae quas
-        enim laudantium praesentium tenetur deserunt voluptates corrupti
-        perferendis itaque natus optio. Reiciendis incidunt numquam, distinctio
-        aliquid nihil enim libero.
-      </p>
+          <h2>Carros mais icônicos do Rally</h2>
+
+          <div class="title-line"></div>
+        </div>
+
+        <div class="cars-grid">
+          <a href="/AudiQuattro" class="car-card">
+            <div class="car-number">01</div>
+
+            <h3>Audi Quattro</h3>
+
+            <p>
+              Um dos carros responsáveis por revolucionar o Rally com a
+              utilização da tração integral.
+            </p>
+
+            <span> CONHECER → </span>
+          </a>
+
+          <a href="/LanciaDelta" class="car-card">
+            <div class="car-number">02</div>
+
+            <h3>Lancia Delta</h3>
+
+            <p>
+              Uma das máquinas mais vitoriosas da história do Campeonato Mundial
+              de Rally.
+            </p>
+
+            <span> CONHECER → </span>
+          </a>
+
+          <a href="/SubaruImpreza" class="car-card">
+            <div class="car-number">03</div>
+
+            <h3>Subaru Impreza</h3>
+
+            <p>
+              Ícone das pistas e símbolo da Subaru no cenário mundial do Rally.
+            </p>
+
+            <span> CONHECER → </span>
+          </a>
+
+          <a href="/LanciaStratos" class="car-card">
+            <div class="car-number">04</div>
+
+            <h3>Lancia Stratos</h3>
+
+            <p>
+              Um lendário carro desenvolvido especialmente para dominar as
+              competições de Rally.
+            </p>
+
+            <span> CONHECER → </span>
+          </a>
+
+          <a href="/Peugeot205" class="car-card">
+            <div class="car-number">05</div>
+
+            <h3>Peugeot 205 T16</h3>
+
+            <p>
+              Uma das máquinas mais marcantes e extremas da lendária era do
+              Grupo B.
+            </p>
+
+            <span> CONHECER → </span>
+          </a>
+        </div>
+      </section>
     </main>
-
     <!-- Incluindo o footer -->
     <%- include("partials/footer") %> ```
   </body>

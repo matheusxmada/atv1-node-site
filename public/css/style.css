@@ -95,7 +95,275 @@
   }
 }
 
-/* Estilização do footer*/
+
+
+/* Estilizando o grid de cards de cada carro*/
+
+.cars-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 24px;
+}
+
+/* Estilizando os cards*/
+
+.car-card {
+position: relative;
+
+min-height: 250px;
+padding: 30px;
+
+display: flex;
+flex-direction: column;
+
+overflow: hidden;
+
+background:
+    linear-gradient(
+        145deg,
+        #242424 0%,
+        #1a1a1a 60%,
+        #151515 100%
+    );
+
+border: 1px solid #333333;
+border-left: 5px solid #e10600;
+
+text-decoration: none;
+
+transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+
+}
+
+/* Estilos da linha de cima */
+
+.car-card::before {
+content: "";
+
+position: absolute;
+
+top: 0;
+left: 0;
+
+width: 0;
+height: 4px;
+
+background-color: #ffc400;
+
+transition: width 0.3s ease;
+
+}
+
+.car-card:hover::before {
+width: 100%;
+}
+
+/* Estilos de um detalhe na diagonal */
+
+.car-card::after {
+content: "";
+
+position: absolute;
+
+right: -60px;
+bottom: -70px;
+
+width: 170px;
+height: 170px;
+
+border: 2px solid rgba(255, 255, 255, 0.04);
+
+transform: rotate(45deg);
+
+transition: transform 0.4s ease;
+
+}
+
+.car-card:hover::after {
+transform: rotate(45deg) scale(1.25);
+}
+
+/* Efeito de hover */
+
+.car-card:hover {
+transform: translateY(-8px);
+
+background:
+    linear-gradient(
+        145deg,
+        #2b2b2b 0%,
+        #1c1c1c 65%,
+        #151515 100%
+    );
+
+border-color: #e10600;
+
+box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(225, 6, 0, 0.08);
+
+}
+
+/* Estilizando os números de cada carro*/
+
+.car-number {
+position: relative;
+z-index: 2;
+
+margin-bottom: 20px;
+
+color: #ffc400;
+
+font-size: 42px;
+line-height: 1;
+
+font-weight: 900;
+
+font-style: italic;
+letter-spacing: -2px;
+
+}
+
+.car-number::after {
+content: "";
+
+display: block;
+
+width: 35px;
+height: 3px;
+
+margin-top: 10px;
+
+background-color: #e10600;
+
+}
+
+/* Estilizando os nomes dos carros */
+
+.car-card h3 {
+position: relative;
+z-index: 2;
+
+margin-bottom: 12px;
+
+color: #f5f5f5;
+
+font-size: 22px;
+font-weight: 900;
+
+text-transform: uppercase;
+letter-spacing: 0.5px;
+
+transition: color 0.2s ease;
+
+}
+
+.car-card:hover h3 {
+color: #ffffff;
+}
+
+/* ================================
+DESCRIÇÃO
+================================ */
+
+.car-card p {
+position: relative;
+z-index: 2;
+
+max-width: 95%;
+
+color: #999999;
+
+font-size: 14px;
+line-height: 1.6;
+
+}
+
+/* Links */
+
+.car-card span {
+position: relative;
+z-index: 2;
+
+margin-top: auto;
+padding-top: 25px;
+
+color: #e10600;
+
+font-size: 13px;
+font-weight: 900;
+
+letter-spacing: 1px;
+
+transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+.car-card:hover span {
+color: #ffc400;
+
+transform: translateX(6px);
+
+}
+
+/* Efeito de velocidade */
+
+.car-card .car-number::before {
+content: "";
+
+position: absolute;
+
+left: -30px;
+top: 18px;
+
+width: 18px;
+height: 2px;
+
+background-color: #e10600;
+
+box-shadow:
+    0 6px 0 #e10600,
+    0 12px 0 #e10600;
+
+opacity: 0.7;
+
+}
+
+/* Responsividade para os cards */
+
+@media (max-width: 1000px) {
+
+.cars-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+}
+
+@media (max-width: 600px) {
+
+.cars-grid {
+    grid-template-columns: 1fr;
+}
+
+.car-card {
+    min-height: 220px;
+    padding: 25px;
+}
+
+.car-number {
+    font-size: 36px;
+}
+
+}
+
+
+/* Estilização do footer */
 .footer {
   margin-top: 60px;
   background-color: #1c1c1c;
@@ -192,3 +460,4 @@
     max-width: 100%;
   }
 }
+
