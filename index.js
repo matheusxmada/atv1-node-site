@@ -22,6 +22,43 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+// ROTA SOBRE
+app.get("/about", (req, res) => {
+  res.render("about");
+});
+
+// ROTA CONTATO
+app.get("/contact", (req, res) => {
+  res.render("contact");
+});
+
+// ROTA FAQ
+app.get("/faq", (req, res) => {
+  res.render("faq");
+});
+
+// ROTA PRIVACIDADE
+app.get("/privacy", (req, res) => {
+  res.render("privacy");
+});
+
+// ROTA CREDITOS
+app.get("/credits", (req, res) => {
+  res.render("credits");
+});
+
+// ROTA DE OUTROS
+app.get("/other", (req, res) => {
+  res.render("other");
+});
+
+
+
+
+
+
+// ROTAS CARROS
+
 // ROTA do AudiQuattro
 app.get("/", (req, res) => {
   res.render("AudiQuattro");

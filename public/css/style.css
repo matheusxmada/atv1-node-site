@@ -1,9 +1,34 @@
-/* Estilização da Navbar */
+/* Página de estilização do site */
+
+/* Body */
+
+body {
+  margin: 0;
+
+  background:
+    linear-gradient(rgba(18, 18, 18, 0.88),
+      rgba(18, 18, 18, 0.92)),
+    url("/images/wallpaper.jpg");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: #f5f5f5;
+}
+
+
+/* Navbar */
+
 .navbar {
   width: 100%;
+
   background-color: #1c1c1c;
+
   border-bottom: 3px solid #e10600;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-container {
@@ -16,8 +41,6 @@
   justify-content: space-between;
 }
 
-/* Estilização da logotipo */
-
 .navbar-logo {
   color: #ffffff;
   text-decoration: none;
@@ -27,19 +50,14 @@
   white-space: nowrap;
 }
 
-/* Estilizando a primeira letra*/
 .navbar-logo::first-letter {
   color: #e10600;
 }
 
-/* Estilizando a última letra*/
 .navbar-logo .last-letter {
   display: inline;
-  color: #2200e1; 
+  color: #2200e1;
 }
-
-
-/* Estilização do menu */
 
 .navbar-menu {
   display: flex;
@@ -63,8 +81,6 @@
   color: #ffc400;
 }
 
-/* Linha vermelha abaixo do link */
-
 .navbar-menu a::after {
   content: "";
   position: absolute;
@@ -80,8 +96,6 @@
   width: 100%;
 }
 
-/* Parte de responsividada com @media do navbar*/
-
 @media (max-width: 1000px) {
   .navbar-container {
     flex-direction: column;
@@ -96,272 +110,457 @@
 }
 
 
+/* Hero section */
 
-/* Estilizando o grid de cards de cada carro*/
+.hero {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background:
+    linear-gradient(rgba(18, 18, 18, 0.75),
+      rgba(18, 18, 18, 0.90)),
+    url("/images/");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-button {
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+  color: #ae0600;
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-5px);
+  color: #d10a04;
+}
+
+.hero-button:hover {
+  transform: translateY(-5px);
+  color: #d10a04;
+}
+
+/* Título para o grid dos cards */
+
+.super-title-cards {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #ae0600;
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+/* A linha que fica abaixo do título */
+.title-line {
+  width: 240px;
+  height: 4px;
+  margin: 0 auto 40px;
+  background-color: #ffffff;
+}
+
+
+/* Grid de cards */
 
 .cars-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 24px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-/* Estilizando os cards*/
+
+/* Card base */
 
 .car-card {
-position: relative;
+  --card-color: #e10600;
+  --card-secondary: #ffc400;
+  --card-title: #f5f5f5;
+  --card-text: #999999;
+  --card-overlay: rgba(18, 18, 18, 0.82);
+  --card-overlay-hover: rgba(18, 18, 18, 0.68);
+  --card-image: none;
+  --card-diagonal: rgba(255, 255, 255, 0.04);
+  position: relative;
+  min-height: 250px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 
-min-height: 250px;
-padding: 30px;
-
-display: flex;
-flex-direction: column;
-
-overflow: hidden;
-
-background:
-    linear-gradient(
-        145deg,
-        #242424 0%,
-        #1a1a1a 60%,
-        #151515 100%
-    );
-
-border: 1px solid #333333;
-border-left: 5px solid #e10600;
-
-text-decoration: none;
-
-transition:
+  background-image:
+    linear-gradient(var(--card-overlay),
+      var(--card-overlay)),
+    var(--card-image);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #333333;
+  border-left: 5px solid var(--card-color);
+  text-decoration: none;
+  transition:
     transform 0.25s ease,
     border-color 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
-
+    box-shadow 0.25s ease;
+    /* === Variáveis Personalizáveis */
+/* --card-color -> cor principal */
+/* --card-secondary -> cor secundária */
+/* --card-title -> título */
+/* --card-text -> descrição */
+/*--card-overlay -> fundo normal */
+/*/*--card-overlay-hover -> fundo no hover */
+/*--card-image -> imagem */
+/* --card-diagonal -> detalhe da diagonal */
 }
 
-/* Estilos da linha de cima */
+
+/* Linha superior que aparece ao colocar o mouse em cima*/
 
 .car-card::before {
-content: "";
-
-position: absolute;
-
-top: 0;
-left: 0;
-
-width: 0;
-height: 4px;
-
-background-color: #ffc400;
-
-transition: width 0.3s ease;
-
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: var(--card-secondary);
+  transition: width 0.3s ease;
 }
 
 .car-card:hover::before {
-width: 100%;
+  width: 100%;
 }
 
-/* Estilos de um detalhe na diagonal */
+
+/* Detalhe quina diagonal */
 
 .car-card::after {
-content: "";
-
-position: absolute;
-
-right: -60px;
-bottom: -70px;
-
-width: 170px;
-height: 170px;
-
-border: 2px solid rgba(255, 255, 255, 0.04);
-
-transform: rotate(45deg);
-
-transition: transform 0.4s ease;
-
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: -70px;
+  width: 170px;
+  height: 170px;
+  border: 2px solid var(--card-diagonal); /*Chamando a variável com var(--nome-da-variavel) de detalhe da diagonal, para alterar especificamente cada detalhe de cada card.*/
+  transform: rotate(45deg);
+  transition: transform 0.4s ease;
 }
 
 .car-card:hover::after {
-transform: rotate(45deg) scale(1.25);
+  transform: rotate(45deg) scale(1.25);
 }
 
-/* Efeito de hover */
+
+/* Efeito hover */
 
 .car-card:hover {
-transform: translateY(-8px);
+  transform: translateY(-8px);
 
-background:
-    linear-gradient(
-        145deg,
-        #2b2b2b 0%,
-        #1c1c1c 65%,
-        #151515 100%
-    );
-
-border-color: #e10600;
-
-box-shadow:
+  box-shadow:
     0 15px 35px rgba(0, 0, 0, 0.45),
-    0 0 20px rgba(225, 6, 0, 0.08);
+    0 0 20px rgba(0, 0, 0, 0.20);
 
+  background-image:
+    linear-gradient(var(--card-overlay-hover),
+      var(--card-overlay-hover)),
+    var(--card-image);
 }
 
-/* Estilizando os números de cada carro*/
+
+/* Número */
 
 .car-number {
-position: relative;
-z-index: 2;
-
-margin-bottom: 20px;
-
-color: #ffc400;
-
-font-size: 42px;
-line-height: 1;
-
-font-weight: 900;
-
-font-style: italic;
-letter-spacing: -2px;
-
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
+  color: var(--card-secondary);
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -2px;
 }
 
 .car-number::after {
-content: "";
-
-display: block;
-
-width: 35px;
-height: 3px;
-
-margin-top: 10px;
-
-background-color: #e10600;
-
+  content: "";
+  display: block;
+  width: 35px;
+  height: 3px;
+  margin-top: 10px;
+  background-color: var(--card-color);
 }
 
-/* Estilizando os nomes dos carros */
+.car-card .car-number::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 18px;
+  width: 18px;
+  height: 2px;
+  background-color: var(--card-color);
+
+  box-shadow:
+    0 6px 0 var(--card-color),
+    0 12px 0 var(--card-color);
+
+  opacity: 0.7;
+}
+
+
+/* Títuçolo */
 
 .car-card h3 {
-position: relative;
-z-index: 2;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 12px;
+  color: var(--card-title);
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 
-margin-bottom: 12px;
+  opacity: 0;
+  transform: translateY(15px);
 
-color: #f5f5f5;
-
-font-size: 22px;
-font-weight: 900;
-
-text-transform: uppercase;
-letter-spacing: 0.5px;
-
-transition: color 0.2s ease;
-
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    color 0.2s ease;
 }
 
 .car-card:hover h3 {
-color: #ffffff;
+  color: #ffffff;
+
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Estilizando descrições */
+
+/* Descrição */
 
 .car-card p {
-position: relative;
-z-index: 2;
+  position: relative;
+  z-index: 2;
+  max-width: 95%;
+  color: var(--card-text);
+  font-size: 14px;
+  line-height: 1.6;
 
-max-width: 95%;
+  opacity: 0;
+  transform: translateY(15px);
 
-color: #999999;
-
-font-size: 14px;
-line-height: 1.6;
-
+  transition:
+    opacity 0.35s ease 0.05s,
+    transform 0.35s ease 0.05s;
 }
 
-/* Links */
+.car-card:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Link */
 
 .car-card span {
-position: relative;
-z-index: 2;
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  padding-top: 25px;
+  /* color: var(--card-color); */
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1px;
 
-margin-top: auto;
-padding-top: 25px;
-
-color: #e10600;
-
-font-size: 13px;
-font-weight: 900;
-
-letter-spacing: 1px;
-
-transition:
+  transition:
     color 0.2s ease,
     transform 0.2s ease;
-
 }
 
 .car-card:hover span {
-color: #ffc400;
-
-transform: translateX(6px);
-
+  color: var(--card-secondary);
+  transform: translateX(6px);
 }
 
-/* Efeito de velocidade */
+/* Estilização específica usando propriedades personalizadas do CSS */
 
-.car-card .car-number::before {
-content: "";
+/* Audi Quattro */
 
-position: absolute;
+.audi-card {
+  --card-color: #fdfdfd;
+  --card-secondary: #ffd000;
+  --card-title: #ffffff;
+  --card-text: #dddddd;
 
-left: -30px;
-top: 18px;
+  --card-overlay: rgba(33, 36, 5, 0.748);
+  --card-overlay-hover: rgba(33, 36, 5, 0.648);
 
-width: 18px;
-height: 2px;
+  --card-diagonal: rgba(255, 208, 0, 0.15);
 
-background-color: #e10600;
-
-box-shadow:
-    0 6px 0 #e10600,
-    0 12px 0 #e10600;
-
-opacity: 0.7;
-
+  --card-image: url("/images/audi.jpg");
 }
 
-/* Responsividade para os cards */
+.audi-card:hover {
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.55),
+    0 0 25px rgba(170, 204, 0, 0.3);
+}
+
+
+
+/* Lancia Delta */
+
+.delta-card {
+  --card-color: #E30613;
+  --card-secondary: #0066B3;
+  --card-title: #ffffff;
+  --card-text: #dddddd;
+
+  --card-overlay: rgba(45, 0, 0, 0.82);
+  --card-overlay-hover: rgba(45, 0, 0, 0.65);
+
+  --card-diagonal: rgba(62, 136, 186, 0.3);
+
+  --card-image: url("/images/lancia-delta.jpg");
+}
+
+.delta-card:hover {
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.55),
+    0 0 25px rgba(225, 6, 0, 0.30);
+}
+
+
+/* Subaru Impreza */
+
+.subaru-card {
+  --card-color: #0067b1;
+  --card-secondary: #d7fb3f;
+  --card-title: #ffffff;
+  --card-text: #dddddd;
+
+  --card-overlay: rgba(0, 20, 45, 0.82);
+  --card-overlay-hover: rgba(0, 20, 45, 0.65);
+
+  --card-diagonal: rgba(183, 255, 0, 0.15);
+
+  --card-image: url("/images/subaru.jpg");
+}
+
+.subaru-card:hover {
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.55),
+    0 0 25px rgba(0, 103, 177, 0.30);
+}
+
+
+/* Lancia Stratos */
+
+.stratos-card {
+  --card-color: #F2F1EC;
+  --card-secondary: #B52B28;
+  --card-title: #ffffff;
+  --card-text: #dddddd;
+
+  --card-overlay: rgba(0, 35, 20, 0.82);
+  --card-overlay-hover: rgba(0, 35, 20, 0.65);
+
+  --card-image: url("/images/lancia-stratos.jpg");
+}
+
+.stratos-card:hover {
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.55),
+    0 0 25px rgba(255, 106, 0, 0.30);
+}
+
+
+/* Peugeot 205 */
+
+.peugeot-card {
+  --card-color: #E8E8E5;
+  --card-secondary: #155A9C;
+  --card-title: #ffffff;
+  --card-text: #dddddd;
+
+  --card-overlay: rgba(6, 27, 61, 0.82);
+  --card-overlay-hover: rgba(6, 27, 61, 0.65);
+
+  --card-image: url("/images/peugeot.jpg");
+}
+
+.peugeot-card:hover {
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.55),
+    0 0 25px rgba(0, 166, 81, 0.30);
+}
+
+
+/* REsponsividade dos cards*/
 
 @media (max-width: 1000px) {
 
-.cars-grid {
+  .cars-grid {
     grid-template-columns: repeat(2, 1fr);
-}
+  }
 
 }
+
 
 @media (max-width: 600px) {
 
-.cars-grid {
+  .cars-grid {
     grid-template-columns: 1fr;
-}
+  }
 
-.car-card {
+  .car-card {
     min-height: 220px;
     padding: 25px;
-}
+  }
 
-.car-number {
+  .car-number {
     font-size: 36px;
-}
+  }
+
+  .super-title-cards {
+    font-size: 28px;
+    padding: 0 20px;
+  }
 
 }
 
 
-/* Estilização do footer */
+/* Footer */
+
 .footer {
   margin-top: 60px;
   background-color: #1c1c1c;
@@ -373,12 +572,12 @@ opacity: 0.7;
   max-width: 1200px;
   margin: 0 auto;
   padding: 45px 0;
+
   display: flex;
   justify-content: space-between;
+
   gap: 60px;
 }
-
-/* Logotipo no footer */
 
 .footer-brand {
   max-width: 350px;
@@ -387,7 +586,6 @@ opacity: 0.7;
 .footer-brand h2 {
   margin-bottom: 12px;
   color: #ffffff;
-
   font-size: 25px;
   font-weight: 900;
   letter-spacing: 2px;
@@ -402,8 +600,6 @@ opacity: 0.7;
   line-height: 1.6;
 }
 
-/* Seção de links */
-
 .footer-links {
   display: flex;
   flex-direction: column;
@@ -413,7 +609,6 @@ opacity: 0.7;
 .footer-links h3 {
   margin-bottom: 8px;
   color: #ffc400;
-
   font-size: 16px;
   text-transform: uppercase;
 }
@@ -422,7 +617,6 @@ opacity: 0.7;
   color: #a0a0a0;
   text-decoration: none;
   font-size: 14px;
-
   transition: color 0.2s ease;
 }
 
@@ -430,13 +624,9 @@ opacity: 0.7;
   color: #ffffff;
 }
 
-/* Parte inferior do footer */
-
 .footer-bottom {
   padding: 18px 0;
-
   text-align: center;
-
   background-color: #121212;
   border-top: 1px solid #333333;
 }
@@ -446,9 +636,9 @@ opacity: 0.7;
   font-size: 13px;
 }
 
-/* Responsividade com @media do footer */
 
 @media (max-width: 700px) {
+
   .footer-container {
     flex-direction: column;
     gap: 35px;
@@ -457,5 +647,5 @@ opacity: 0.7;
   .footer-brand {
     max-width: 100%;
   }
-}
 
+}
