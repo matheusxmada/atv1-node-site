@@ -1,11 +1,12 @@
+<!-- Index do site -->
 <!DOCTYPE html>
-
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>RALLYHUB | Carros Icônicos do Rally</title>
+    <title>RALLYHUB</title>
 
     <link rel="stylesheet" href="/css/style.css" />
   </head>
@@ -14,13 +15,12 @@
     <!-- INcluindo a navbar -->
     <%- include("partials/navbar") %>
 
-    <!-- Incluindo o -->
+    <!-- Incluindo o header -->
     <%- include("partials/header") %>
-
     <main>
       <section class="cars-section" id="carros">
         <div class="section-title">
-          <p>AS GRANDES LENDAS</p>
+          <!-- <p>AS GRANDES LENDAS</p> -->
 
           <h2>Carros mais icônicos do Rally</h2>
 
@@ -28,6 +28,7 @@
         </div>
 
         <div class="cars-grid">
+          <!-- Audi Quattro -->
           <a href="/AudiQuattro" class="car-card">
             <div class="car-number">01</div>
 
@@ -41,6 +42,7 @@
             <span> CONHECER → </span>
           </a>
 
+          <!-- Lancia Delta -->
           <a href="/LanciaDelta" class="car-card">
             <div class="car-number">02</div>
 
@@ -54,6 +56,7 @@
             <span> CONHECER → </span>
           </a>
 
+          <!-- Subaru Impreza -->
           <a href="/SubaruImpreza" class="car-card">
             <div class="car-number">03</div>
 
@@ -66,6 +69,7 @@
             <span> CONHECER → </span>
           </a>
 
+          <!-- Lancia Stratos -->
           <a href="/LanciaStratos" class="car-card">
             <div class="car-number">04</div>
 
@@ -79,6 +83,7 @@
             <span> CONHECER → </span>
           </a>
 
+          <!-- Peugeot 205 -->
           <a href="/Peugeot205" class="car-card">
             <div class="car-number">05</div>
 
@@ -94,7 +99,8 @@
         </div>
       </section>
     </main>
+
     <!-- Incluindo o footer -->
-    <%- include("partials/footer") %> ```
+    <%- include("partials/footer") %>
   </body>
 </html>
