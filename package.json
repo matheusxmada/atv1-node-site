@@ -1,0 +1,26 @@
+{
+  "name": "atv1-node-site",
+  "version": "1.0.0",
+  "description": "ATV01 - Criando uma aplicação NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusxmada/atv1-node-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/matheusxmada/atv1-node-site/issues"
+  },
+  "homepage": "https://github.com/matheusxmada/atv1-node-site#readme",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1"
+  }
+}
