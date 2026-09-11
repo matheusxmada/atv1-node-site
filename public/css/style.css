@@ -266,9 +266,7 @@ transition: color 0.2s ease;
 color: #ffffff;
 }
 
-/* ================================
-DESCRIÇÃO
-================================ */
+/* Estilizando descrições */
 
 .car-card p {
 position: relative;
