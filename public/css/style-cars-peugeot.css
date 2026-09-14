@@ -1,0 +1,865 @@
+/* Estilização do Peugeot 205 T16 */
+
+
+/* ============================================
+   Geral
+   ============================================ */
+
+.car-page {
+    width: 100%;
+    overflow: hidden;
+}
+
+.car-page p {
+    margin: 0;
+}
+
+
+/* ============================================
+   Página
+   ============================================ */
+
+.car-page {
+    background: #050505;
+    color: #f5f5f5;
+}
+
+
+/* ============================================
+   Hero
+   ============================================ */
+
+.car-hero {
+    position: relative;
+
+    width: 100%;
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+/* Imagem principal do Peugeot 205 */
+
+.peugeot-hero {
+    background-image: url("/images/peugeot-205-wallpaper-2.jpeg");
+    background-position: center center;
+}
+
+
+/* Escurecimento da imagem */
+
+.car-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.88) 0%,
+            rgba(0, 0, 0, 0.68) 35%,
+            rgba(0, 0, 0, 0.25) 75%,
+            rgba(0, 0, 0, 0.40) 100%
+        );
+}
+
+
+/* Linha divisória abaixo da navbar/hero */
+
+.car-hero::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #1d5fa7;
+}
+
+
+/* ============================================
+   Conteúdo do Hero
+   ============================================ */
+
+.car-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1400px, 82%);
+
+    margin: 0 auto;
+
+    padding-top: 20px;
+}
+
+
+/* Número */
+
+.car-page-number {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #1d5fa7;
+
+    font-size: 20px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+/* Categoria */
+
+.car-page-category {
+    margin-bottom: 20px !important;
+
+    color: #1d5fa7;
+
+    font-size: 16px;
+    font-weight: 900;
+
+    letter-spacing: 8px;
+}
+
+
+/* Título */
+
+.car-hero h1 {
+    margin: 0;
+
+    color: #f5f5f5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(90px, 9vw, 170px);
+
+    font-weight: 900;
+
+    line-height: 0.82;
+
+    letter-spacing: -5px;
+
+    text-transform: uppercase;
+}
+
+
+/* 205 T16 em azul */
+
+.car-hero h1 span {
+    color: #1d5fa7;
+}
+
+
+/* Descrição */
+
+.car-hero-description {
+    max-width: 720px;
+
+    margin-top: 38px !important;
+
+    color: #e5e5e5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* ============================================
+   História
+   ============================================ */
+
+.car-content {
+    position: relative;
+
+    width: 100%;
+
+    padding: 75px 0 120px;
+
+    background: #030303;
+}
+
+
+/* Cabeçalho da seção */
+
+.car-section-title {
+    width: min(1400px, 82%);
+
+    margin: 0 auto 65px;
+}
+
+
+/* Pequeno título azul */
+
+.car-section-title > span {
+    display: block;
+
+    margin-bottom: 16px;
+
+    color: #1d5fa7;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    letter-spacing: 5px;
+}
+
+
+/* Título principal */
+
+.car-section-title h2 {
+    margin: 0;
+
+    color: #f4f4f4;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(45px, 4.5vw, 72px);
+
+    font-weight: 900;
+
+    line-height: 1;
+
+    text-transform: uppercase;
+}
+
+
+/* Linha azul */
+
+.title-line {
+    width: 92px;
+    height: 5px;
+
+    margin-top: 25px;
+
+    background: #1d5fa7;
+}
+
+
+/* Conteúdo da história */
+
+.car-history {
+    width: min(1400px, 82%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 75px;
+
+    align-items: center;
+}
+
+
+/* Texto */
+
+.car-history-text {
+    padding-top: 10px;
+}
+
+
+.car-history-text p {
+    margin-bottom: 28px !important;
+
+    color: #d6d6d6;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    line-height: 2;
+}
+
+
+/* Remove margem do último parágrafo */
+
+.car-history-text p:last-child {
+    margin-bottom: 0 !important;
+}
+
+
+/* Imagem */
+
+.car-history-image {
+    position: relative;
+
+    padding: 15px;
+
+    border: 2px solid rgba(29, 95, 167, 0.45);
+}
+
+
+/* Imagem */
+
+.car-history-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+
+/* ============================================
+   Legado
+   ============================================ */
+
+.legacy-section {
+    position: relative;
+
+    min-height: 630px;
+
+    display: flex;
+    align-items: center;
+
+    background-image: url("/images/peugeot-205-wallpaper-3.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+
+/* Escurecimento do legado */
+
+.legacy-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.94) 0%,
+            rgba(0, 0, 0, 0.80) 42%,
+            rgba(0, 0, 0, 0.55) 100%
+        );
+}
+
+
+/* Conteúdo */
+
+.legacy-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1400px, 82%);
+
+    margin: 0 auto;
+
+    padding: 80px 0;
+}
+
+
+/* Número da seção */
+
+.legacy-content > span {
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: #1d5fa7;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    letter-spacing: 5px;
+}
+
+
+/* Título */
+
+.legacy-content h2 {
+    max-width: 1100px;
+
+    margin: 0;
+
+    color: #f5f5f5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(55px, 6vw, 95px);
+
+    font-weight: 900;
+
+    line-height: 0.95;
+
+    text-transform: uppercase;
+}
+
+
+/* Texto */
+
+.legacy-content p {
+    max-width: 900px;
+
+    margin-top: 40px !important;
+
+    color: #d5d5d5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+
+/* ============================================
+   Botão ← Voltar
+   ============================================ */
+
+.back-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-top: 55px;
+
+    padding: 20px 30px;
+
+    border: 1px solid #1d5fa7;
+
+    color: #f5f5f5;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.back-button:hover {
+    color: #ffffff;
+
+    background: #1d5fa7;
+
+    transform: translateX(6px);
+}
+
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.car-page + footer {
+    border-top: 3px solid #1d5fa7;
+}
+
+
+/* ============================================
+   Eventos
+   ============================================ */
+
+.rally-events-section {
+    width: 100%;
+
+    padding: 110px 0 130px;
+
+    background: #050505;
+
+    overflow: hidden;
+}
+
+
+/* Cabeçalho */
+
+.rally-events-header {
+    width: min(1400px, 82%);
+
+    margin: 0 auto 60px;
+}
+
+
+.rally-events-header > span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #1d5fa7;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    letter-spacing: 5px;
+}
+
+
+.rally-events-header h2 {
+    margin: 0;
+
+    color: #f5f5f5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(48px, 5vw, 78px);
+
+    font-weight: 900;
+
+    line-height: 0.95;
+
+    text-transform: uppercase;
+}
+
+
+.rally-events-header .title-line {
+    width: 92px;
+    height: 5px;
+
+    margin-top: 28px;
+
+    background: #1d5fa7;
+}
+
+
+.rally-events-header p {
+    max-width: 750px;
+
+    margin-top: 30px;
+
+    color: #cfcfcf;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* ============================================
+   Tabela
+   ============================================ */
+
+.rally-table-container {
+    width: min(1400px, 90%);
+
+    margin: 0 auto;
+
+    overflow-x: auto;
+
+    border-top: 1px solid rgba(29, 95, 167, 0.5);
+    border-left: 1px solid rgba(29, 95, 167, 0.25);
+}
+
+
+.rally-table {
+    width: 100%;
+
+    min-width: 900px;
+
+    border-collapse: collapse;
+
+    background: #080808;
+
+    color: #ddd;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* Cabeçalho */
+
+.rally-table thead {
+    background: #111;
+}
+
+
+.rally-table th {
+    padding: 18px 15px;
+
+    border-right: 1px solid #333;
+    border-bottom: 2px solid #1d5fa7;
+
+    color: #1d5fa7;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+/* Células */
+
+.rally-table td {
+    padding: 15px;
+
+    border-right: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+
+    vertical-align: middle;
+
+    line-height: 1.4;
+}
+
+
+/* Número */
+
+.rally-table .event-number {
+    width: 45px;
+
+    color: #888;
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* Evento */
+
+.rally-table .event-name {
+    min-width: 250px;
+
+    color: #f0f0f0;
+
+    font-weight: 700;
+}
+
+
+/* Temporada */
+
+.rally-table .event-season {
+    color: #1d5fa7;
+
+    font-weight: 900;
+
+    text-align: center;
+}
+
+
+/* Versão */
+
+.rally-table .event-version {
+    color: #fff;
+
+    font-weight: 700;
+}
+
+
+/* Hover linhas */
+
+.rally-table tbody tr {
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.rally-table tbody tr:hover {
+    background: rgba(29, 95, 167, 0.08);
+}
+
+
+.rally-table tbody tr:hover .event-name {
+    color: #1d5fa7;
+}
+
+
+/* ============================================
+   Responsividade da tabela
+   ============================================ */
+
+@media (max-width: 1000px) {
+
+    .rally-events-header {
+        width: 88%;
+    }
+
+    .rally-table-container {
+        width: 92%;
+    }
+
+}
+
+
+/* ============================================
+   Responsividade
+   ============================================ */
+
+@media (max-width: 600px) {
+
+    .rally-events-section {
+        padding: 75px 0 90px;
+    }
+
+    .rally-events-header {
+        width: 90%;
+    }
+
+    .rally-events-header h2 {
+        font-size: 43px;
+    }
+
+    .rally-events-header p {
+        font-size: 15px;
+    }
+
+    .rally-table {
+        font-size: 12px;
+    }
+
+    .rally-table th {
+        padding: 14px 10px;
+
+        font-size: 10px;
+    }
+
+    .rally-table td {
+        padding: 12px 10px;
+    }
+
+}
+
+
+/* ============================================
+   Responsividade geral
+   ============================================ */
+
+@media (max-width: 1000px) {
+
+    .car-hero {
+        min-height: 600px;
+    }
+
+    .car-hero-content,
+    .car-section-title,
+    .car-history,
+    .legacy-content {
+        width: 88%;
+    }
+
+    .car-history {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .car-history-image {
+        max-width: 800px;
+
+        margin: 0 auto;
+    }
+
+    .legacy-section {
+        min-height: 600px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .car-hero {
+        min-height: 620px;
+
+        background-position: 60% center;
+    }
+
+    .car-hero-content,
+    .car-section-title,
+    .car-history,
+    .legacy-content {
+        width: 90%;
+    }
+
+    .car-page-number {
+        font-size: 17px;
+    }
+
+    .car-page-category {
+        font-size: 13px;
+
+        letter-spacing: 5px;
+    }
+
+    .car-hero h1 {
+        font-size: 70px;
+
+        letter-spacing: -3px;
+    }
+
+    .car-hero-description {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .car-content {
+        padding: 60px 0 80px;
+    }
+
+    .car-section-title {
+        margin-bottom: 45px;
+    }
+
+    .car-section-title h2 {
+        font-size: 38px;
+    }
+
+    .car-history-text p {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+    .legacy-section {
+        min-height: 600px;
+    }
+
+    .legacy-content h2 {
+        font-size: 48px;
+    }
+
+    .legacy-content p {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+    .back-button {
+        padding: 17px 22px;
+
+        font-size: 13px;
+    }
+
+}

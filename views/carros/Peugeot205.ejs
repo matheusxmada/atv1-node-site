@@ -1,0 +1,254 @@
+<!-- Página do Peugeot 205 T16 -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Peugeot 205 T16 | RALLYHUB</title>
+
+    <!-- CSS geral -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- CSS exclusivo do Peugeot 205 T16 -->
+    <link rel="stylesheet" href="/css/style-cars-peugeot.css">
+</head>
+
+<body>
+
+    <!-- Incluindo a navbar -->
+    <%- include("../partials/navbar") %>
+
+
+        <main class="car-page">
+
+            <!-- Hero -->
+
+            <section class="car-hero peugeot-hero">
+
+                <div class="car-hero-overlay"></div>
+
+                <div class="car-hero-content">
+
+                    <span class="car-page-number">
+                        05
+                    </span>
+
+                    <p class="car-page-category">
+                        GRUPO B
+                    </p>
+
+                    <h1>
+                        PEUGEOT<br>
+                        <span>205 T16</span>
+                    </h1>
+
+                    <p class="car-hero-description">
+                        Uma das máquinas mais marcantes da era do Grupo B,
+                        conhecida por seu desempenho, tração integral e
+                        grande sucesso no Campeonato Mundial de Rally.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Descrição geral -->
+
+            <section class="car-content">
+
+                <div class="car-section-title">
+
+                    <span>
+                        HISTÓRIA
+                    </span>
+
+                    <h2>
+                        UMA LENDA DO GRUPO B
+                    </h2>
+
+                    <div class="title-line"></div>
+
+                </div>
+
+
+                <div class="car-history">
+
+                    <div class="car-history-text">
+
+                        <p>
+                            O Peugeot 205 T16 foi desenvolvido especialmente
+                            para competir no Campeonato Mundial de Rally,
+                            tornando-se um dos principais representantes da
+                            Peugeot durante a era do Grupo B.
+                        </p>
+
+                        <p>
+                            Equipado com motor turboalimentado e sistema de
+                            tração integral, o 205 T16 apresentava uma
+                            configuração extremamente voltada para o
+                            desempenho nas competições.
+                        </p>
+
+                        <p>
+                            Durante a década de 1980, o modelo conquistou
+                            importantes vitórias no Rally mundial e ajudou
+                            a consolidar a Peugeot como uma das grandes
+                            forças da modalidade.
+                        </p>
+
+                    </div>
+
+
+                    <div class="car-history-image">
+
+                        <img src="/images/peugeot-wallpaper.jpg" alt="Peugeot 205 T16">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Tabela de competições -->
+
+            <section class="rally-events-section">
+
+                <div class="rally-events-header">
+
+                    <span>
+                        COMPETIÇÕES
+                    </span>
+
+                    <h2>
+                        CONQUISTAS<br>
+                        DO 205 T16
+                    </h2>
+
+                    <p>
+                        Principais vitórias conquistadas pelo Peugeot 205 T16
+                        durante sua participação no Campeonato Mundial de Rally.
+                    </p>
+
+                </div>
+
+
+                <div class="rally-table-container">
+
+                    <table class="rally-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>#</th>
+                                <th>Evento</th>
+                                <th>Temporada</th>
+                                <th>Piloto</th>
+                                <th>Copiloto</th>
+                                <th>Versão</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <% peugeotEventos.forEach((evento, index)=> { %>
+
+                                <tr>
+
+                                    <td class="event-number">
+                                        <%= index + 1 %>
+                                    </td>
+
+                                    <td class="event-name">
+                                        <%= evento.evento %>
+                                    </td>
+
+                                    <td class="event-season">
+                                        <%= evento.temporada %>
+                                    </td>
+
+                                    <td>
+                                        <%= evento.motorista %>
+                                    </td>
+
+                                    <td>
+                                        <%= evento.copiloto %>
+                                    </td>
+
+                                    <td class="event-version">
+                                        <%= evento.versao %>
+                                    </td>
+
+                                </tr>
+
+                                <% }); %>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- Legado -->
+
+            <section class="legacy-section">
+
+                <div class="legacy-overlay"></div>
+
+                <div class="legacy-content">
+
+                    <span>
+                        LEGADO
+                    </span>
+
+                    <h2>
+                        POTÊNCIA.<br>
+                        TRAÇÃO.<br>
+                        DOMÍNIO.
+                    </h2>
+
+                    <p>
+                        O Peugeot 205 T16 tornou-se uma das maiores
+                        referências da era do Grupo B e um dos carros
+                        mais importantes da história da Peugeot no
+                        Rally mundial.
+                    </p>
+
+                    <p>
+                        Seu desempenho, sistema de tração integral e
+                        características voltadas para competição fizeram
+                        do 205 T16 uma das máquinas mais lembradas pelos
+                        fãs do automobilismo.
+                    </p>
+
+                    <p>
+                        O modelo também se tornou um símbolo da era
+                        mais extrema do Rally, representando a combinação
+                        entre tecnologia, desempenho e competição.
+                    </p>
+
+                    <a href="/cars" class="back-button">
+                        ← VOLTAR AOS CARROS
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Incluindo o footer -->
+        <%- include("../partials/footer") %>
+
+</body>
+
+</html>

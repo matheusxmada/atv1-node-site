@@ -1,0 +1,254 @@
+<!-- Página do Subaru Impreza -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Subaru Impreza | RALLYHUB</title>
+
+    <!-- CSS geral -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- CSS exclusivo do Subaru Impreza -->
+    <link rel="stylesheet" href="/css/style-cars-subaru.css">
+</head>
+
+<body>
+
+    <!-- Incluindo a navbar -->
+    <%- include("../partials/navbar") %>
+
+
+        <main class="car-page">
+
+            <!-- Hero -->
+
+            <section class="car-hero subaru-hero">
+
+                <div class="car-hero-overlay"></div>
+
+                <div class="car-hero-content">
+
+                    <span class="car-page-number">
+                        03
+                    </span>
+
+                    <p class="car-page-category">
+                        GRUPO A
+                    </p>
+
+                    <h1>
+                        SUBARU<br>
+                        <span>IMPREZA</span>
+                    </h1>
+
+                    <p class="car-hero-description">
+                        Um dos maiores símbolos da Subaru no Rally,
+                        conhecido por sua tração integral e presença
+                        marcante no Campeonato Mundial.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Descrição geral -->
+
+            <section class="car-content">
+
+                <div class="car-section-title">
+
+                    <span>
+                        HISTÓRIA
+                    </span>
+
+                    <h2>
+                        UM ÍCONE DO GRUPO A
+                    </h2>
+
+                    <div class="title-line"></div>
+
+                </div>
+
+
+                <div class="car-history">
+
+                    <div class="car-history-text">
+
+                        <p>
+                            O Subaru Impreza tornou-se um dos modelos mais
+                            importantes da história da Subaru no Campeonato
+                            Mundial de Rally.
+                        </p>
+
+                        <p>
+                            Com seu sistema de tração integral, motor
+                            turboalimentado e configuração desenvolvida
+                            para competições, o Impreza apresentou grande
+                            desempenho em diferentes tipos de terreno.
+                        </p>
+
+                        <p>
+                            Durante as décadas de 1990 e 2000, o modelo
+                            conquistou importantes resultados no Rally
+                            mundial e tornou-se um dos carros mais
+                            reconhecidos da modalidade.
+                        </p>
+
+                    </div>
+
+
+                    <div class="car-history-image">
+
+                        <img src="/images/subaru-wallpaper-3.jpeg" alt="Subaru Impreza">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TABELA DE VITÓRIAS -->
+
+            <section class="rally-events-section">
+
+                <div class="rally-events-header">
+
+                    <span>
+                        COMPETIÇÕES
+                    </span>
+
+                    <h2>
+                        CONQUISTAS<br>
+                        DO IMPREZA
+                    </h2>
+
+                    <p>
+                        Principais vitórias conquistadas pelo Subaru Impreza
+                        durante sua participação no Campeonato Mundial de Rally.
+                    </p>
+
+                </div>
+
+
+                <div class="rally-table-container">
+
+                    <table class="rally-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>#</th>
+                                <th>Evento</th>
+                                <th>Temporada</th>
+                                <th>Piloto</th>
+                                <th>Copiloto</th>
+                                <th>Versão</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <% subaruEventos.forEach((evento, index)=> { %>
+
+                                <tr>
+
+                                    <td class="event-number">
+                                        <%= index + 1 %>
+                                    </td>
+
+                                    <td class="event-name">
+                                        <%= evento.evento %>
+                                    </td>
+
+                                    <td class="event-season">
+                                        <%= evento.temporada %>
+                                    </td>
+
+                                    <td>
+                                        <%= evento.motorista %>
+                                    </td>
+
+                                    <td>
+                                        <%= evento.copiloto %>
+                                    </td>
+
+                                    <td class="event-version">
+                                        <%= evento.versao %>
+                                    </td>
+
+                                </tr>
+
+                                <% }); %>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- Legado -->
+
+            <section class="legacy-section">
+
+                <div class="legacy-overlay"></div>
+
+                <div class="legacy-content">
+
+                    <span>
+                        LEGADO
+                    </span>
+
+                    <h2>
+                        TRAÇÃO.<br>
+                        PERFORMANCE.<br>
+                        PRECISÃO.
+                    </h2>
+
+                    <p>
+                        O Subaru Impreza tornou-se uma das maiores
+                        referências da Subaru no Rally mundial,
+                        especialmente durante sua participação na
+                        era do Grupo A.
+                    </p>
+
+                    <p>
+                        Seu sistema de tração integral, desempenho
+                        e identidade visual fizeram do Impreza um dos
+                        modelos mais reconhecidos pelos fãs do
+                        automobilismo.
+                    </p>
+
+                    <p>
+                        "If in doubt, flat out!"
+                        <br>
+                        (Em português:"Na dúvida, pise fundo!")
+                        <br>
+                    </p>
+
+                    <a href="/cars" class="back-button">
+                        ← VOLTAR AOS CARROS
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Incluindo o footer -->
+        <%- include("../partials/footer") %>
+
+</body>
+
+</html>

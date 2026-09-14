@@ -1,0 +1,235 @@
+<!-- Página do Lancia Delta -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lancia Delta S4 | RALLYHUB</title>
+
+    <!-- CSS geral -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- CSS exclusivo do Lancia Delta -->
+    <link rel="stylesheet" href="/css/style-cars-delta.css">
+</head>
+
+<body>
+
+    <!-- Incluindo a navbar -->
+    <%- include("../partials/navbar") %>
+
+
+        <main class="car-page">
+
+            <!-- Hero -->
+
+            <section class="car-hero delta-hero">
+
+                <div class="car-hero-overlay"></div>
+
+                <div class="car-hero-content">
+
+                    <span class="car-page-number">
+                        02
+                    </span>
+
+                    <p class="car-page-category">
+                        GRUPO B
+                    </p>
+
+                    <h1>
+                        LANCIA<br>
+                        <span>DELTA S4</span>
+                    </h1>
+
+                    <p class="car-hero-description">
+                        Uma das máquinas mais extremas produzidas durante
+                        a era do Grupo B, combinando potência e tecnologia.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Descrição geral -->
+
+            <section class="car-content">
+
+                <div class="car-section-title">
+
+                    <span>
+                        HISTÓRIA
+                    </span>
+
+                    <h2>
+                        UMA MÁQUINA DO GRUPO B
+                    </h2>
+
+                    <div class="title-line"></div>
+
+                </div>
+
+
+                <div class="car-history">
+
+                    <div class="car-history-text">
+
+                        <p>
+                            O Lancia Delta S4 foi desenvolvido pela Lancia
+                            especificamente para competir no Campeonato Mundial
+                            de Rally durante a era do Grupo B.
+                        </p>
+
+                        <p>
+                            O modelo utilizava um sistema de alimentação que
+                            combinava compressor e turbocompressor, permitindo
+                            entregar grande potência em diferentes faixas de
+                            rotação.
+                        </p>
+
+                        <p>
+                            Com tração integral, baixo peso e tecnologia avançada,
+                            o Delta S4 tornou-se uma das máquinas mais marcantes
+                            da geração mais extrema do Rally mundial.
+                        </p>
+
+                    </div>
+
+
+                    <div class="car-history-image">
+
+                        <img src="/images/lancia-delta-wallpaper-3.webp" alt="Lancia Delta S4">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- TABELA DE VITÓRIAS -->
+
+            <section class="rally-events-section">
+
+                <div class="rally-events-header">
+
+                    <span>COMPETIÇÕES</span>
+
+                    <h2>
+                        CONQUISTAS<br>
+                        DO DELTA
+                    </h2>
+
+                    <p>
+                        Principais vitórias conquistadas pelo Lancia Delta S4 no Campeonato Mundial de Rally. <br>
+                        O Lancia Delta S4 teve 5 vitórias listadas no WRC, sendo uma delas o Sanremo de 1986
+                        posteriormente anulado.
+                    </p>
+
+                </div>
+
+                <div class="rally-table-container">
+
+                    <table class="rally-table">
+
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Evento</th>
+                                <th>Temporada</th>
+                                <th>Piloto</th>
+                                <th>Copiloto</th>
+                                <th>Versão</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <% deltaEventos.forEach((evento, index)=> { %>
+
+                                <tr>
+
+                                    <td class="event-number">
+                                        <%= index + 1 %>
+                                    </td>
+
+                                    <td class="event-name">
+                                        <%= evento.evento %>
+                                    </td>
+
+                                    <td class="event-season">
+                                        <%= evento.temporada %>
+                                    </td>
+
+                                    <td>
+                                        <%= evento.piloto %>
+                                    </td>
+
+                                    <td>
+                                        <%= evento.copiloto %>
+                                    </td>
+
+                                    <td class="event-version">
+                                        <%= evento.versao %>
+                                    </td>
+
+                                </tr>
+
+                                <% }); %>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- Legado -->
+
+            <section class="legacy-section">
+
+                <div class="legacy-overlay"></div>
+
+                <div class="legacy-content">
+
+                    <span>
+                        LEGADO
+                    </span>
+
+                    <h2>
+                        TECNOLOGIA.<br>
+                        POTÊNCIA.<br>
+                        PRECISÃO.
+                    </h2>
+
+                    <p>
+                        O Lancia Delta S4 representa uma das maiores expressões
+                        tecnológicas da era do Grupo B, permanecendo como um dos
+                        modelos mais lembrados da história do Rally.
+                    </p>
+
+                    <p>
+                        "O Lancia Delta foi o carro mais perfeito que já pilotei em toda a minha carreira."
+                        - Massimo Biasion, duas vezes campeão do WRC em 1988 e 1989.
+                        <br>
+
+                        <a href="/cars" class="back-button">
+                            ← VOLTAR AOS CARROS
+                        </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Incluindo o footer -->
+        <%- include("../partials/footer") %>
+
+</body>
+
+</html>

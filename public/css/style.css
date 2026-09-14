@@ -494,6 +494,8 @@ body {
   --card-overlay: rgba(0, 35, 20, 0.82);
   --card-overlay-hover: rgba(0, 35, 20, 0.65);
 
+  --card-diagonal: rgba(255, 0, 0, 0.15);
+
   --card-image: url("/images/lancia-stratos.jpg");
 }
 
@@ -515,13 +517,14 @@ body {
   --card-overlay: rgba(6, 27, 61, 0.82);
   --card-overlay-hover: rgba(6, 27, 61, 0.65);
 
+  --card-diagonal: rgba(214, 218, 19, 0.3);
   --card-image: url("/images/peugeot.jpg");
 }
 
 .peugeot-card:hover {
   box-shadow:
     0 15px 35px rgba(0, 0, 0, 0.55),
-    0 0 25px rgba(0, 166, 81, 0.30);
+    0 0 25px rgba(249, 250, 251, 0.3);
 }
 
 

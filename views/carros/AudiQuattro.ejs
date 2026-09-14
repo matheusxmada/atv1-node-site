@@ -1,0 +1,239 @@
+<!-- Página do Audi Quattro -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Audi Quattro | RALLYHUB</title>
+
+    <!-- CSS geral -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- CSS exclusivo do Audi Quattro -->
+    <link rel="stylesheet" href="/css/style-cars-audi.css">
+</head>
+
+<body>
+
+    <!-- Incluindo a navbar -->
+    <%- include("../partials/navbar") %>
+
+
+        <main class="car-page">
+
+            <!-- Hero -->
+
+            <section class="car-hero audi-hero">
+
+                <div class="car-hero-overlay"></div>
+
+                <div class="car-hero-content">
+
+                    <span class="car-page-number">
+                        01
+                    </span>
+
+                    <p class="car-page-category">
+                        GRUPO B
+                    </p>
+
+                    <h1>
+                        AUDI<br>
+                        <span>QUATTRO</span>
+                    </h1>
+
+                    <p class="car-hero-description">
+                        Um dos carros mais revolucionários da história do Rally,
+                        responsável por popularizar a tração integral nas competições.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Descrição geral -->
+
+            <section class="car-content">
+
+                <div class="car-section-title">
+
+                    <span>
+                        HISTÓRIA
+                    </span>
+
+                    <h2>
+                        O CARRO QUE MUDOU O RALLY
+                    </h2>
+
+                    <div class="title-line"></div>
+
+                </div>
+
+
+                <div class="car-history">
+
+                    <div class="car-history-text">
+
+                        <p>
+                            O Audi Quattro é um carro de estrada e de rali,
+                            produzido pelo fabricante alemão de automóveis Audi,
+                            parte do Grupo Volkswagen. Foi apresentado pela primeira
+                            vez no Salão Automóvel de Genebra de 1980, 3 de março.
+                            A produção continuou até 1991.
+                        </p>
+
+                        <p>
+                            O nome do modelo quattro deriva da palavra italiana
+                            para "quatro", transmitindo a ideia de que a potência
+                            é distribuída para as quatro rodas.
+                        </p>
+
+                        <p>
+                            Sua combinação de potência, tecnologia e tração nas
+                            quatro rodas tornou o modelo um dos grandes símbolos
+                            da era mais radical do Rally mundial.
+                        </p>
+
+                    </div>
+
+
+                    <div class="car-history-image">
+
+                        <img src="/images/audi-wallpaper-3.jpg" alt="Audi Quattro">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Tabela de Vítorias -->
+
+            <section class="rally-events-section">
+
+                <div class="rally-events-header">
+
+                    <span>
+                        COMPETIÇÕES
+                    </span>
+
+                    <h2>
+                        O QUATTRO NAS<br>
+                        PISTAS
+                    </h2>
+
+                    <div class="title-line"></div>
+
+                    <p>
+                        Algumas das principais participações do Audi Quattro
+                        em competições de Rally durante a década de 1980.
+                    </p>
+
+                </div>
+
+
+                <div class="rally-table-container">
+
+                    <table class="rally-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>#</th>
+                                <th>Evento</th>
+                                <th>Temporada</th>
+                                <th>Motorista</th>
+                                <th>Copiloto</th>
+                                <th>Versão</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <% audiEventos.forEach(function(evento, index) { %>
+
+                                <tr>
+
+                                    <td class="event-number">
+                                        <%= index + 1 %>
+                                    </td>
+
+                                    <td class="event-name">
+                                        <%= evento.evento %>
+                                    </td>
+
+                                    <td class="event-season">
+                                        <%= evento.temporada %>
+                                    </td>
+
+                                    <td>
+                                        <%= evento.motorista %>
+                                    </td>
+
+                                    <td>
+                                        <%= evento.copiloto %>
+                                    </td>
+
+                                    <td class="event-version">
+                                        <%= evento.versao %>
+                                    </td>
+
+                                </tr>
+
+                                <% }); %>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- Legado -->
+
+            <section class="legacy-section">
+
+                <div class="legacy-overlay"></div>
+
+                <div class="legacy-content">
+
+                    <span>
+                        LEGADO
+                    </span>
+
+                    <h2>
+                        MAIS QUE UM CARRO.<br>
+                        UMA REVOLUÇÃO.
+                    </h2>
+
+                    <p>
+                        O Audi Quattro ajudou a estabelecer a tração integral como
+                        uma importante tecnologia para o Rally. Seu legado permanece
+                        como uma das maiores contribuições tecnológicas da história
+                        da modalidade.
+                    </p>
+
+                    <a href="/cars" class="back-button">
+                        ← VOLTAR AOS CARROS
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Incluindo o footer -->
+        <%- include("../partials/footer") %>
+
+</body>
+
+</html>

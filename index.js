@@ -3,6 +3,13 @@
 // Importando o Express para o projeto.
 const express = require("express");
 
+// Importando os dados dos eventos dos carros
+const audiEventos = require("./data/audiEventos");
+const deltaEventos = require("./data/deltaEventos");
+const subaruEventos = require("./data/subaruEventos");
+const stratosEventos = require("./data/stratosEventos");
+const peugeotEventos = require("./data/peugeotEventos");
+
 // Criando uma instância do Express
 const app = express();
 
@@ -12,14 +19,10 @@ app.set("view engine", "ejs");
 // Configurando os arquivos estáticos (CSS, Imagens e scripts .JS)
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-    res.render("index");
-});
-
 // ROTAS
 // ROTA PRINCIPAL
 app.get("/", (req, res) => {
-  res.render("index");
+    res.render("index");
 });
 
 // ROTA SOBRE
@@ -57,33 +60,48 @@ app.get("/other", (req, res) => {
 
 
 
+
 // ROTAS CARROS
 
+// ROTA do cards dos carros
+app.get("/cars", (req, res) => {
+  res.render("cars");
+});
+
 // ROTA do AudiQuattro
-app.get("/", (req, res) => {
-  res.render("AudiQuattro");
+app.get("/AudiQuattro", (req, res) => {
+    res.render("carros/AudiQuattro", {
+        audiEventos: audiEventos
+    });
 });
 
 // ROTA do Lancia Delta
-app.get("/", (req, res) => {
-  res.render("LanciaDelta");
+app.get("/LanciaDelta", (req, res) => {
+    res.render("carros/LanciaDelta", {
+        deltaEventos: deltaEventos
+    });
 });
 
 // ROTA do Subaru Impreza
-app.get("/", (req, res) => {
-  res.render("Subaru Impreza");
+app.get("/SubaruImpreza", (req, res) => {
+    res.render("carros/SubaruImpreza", {
+        subaruEventos: subaruEventos
+    });
 });
 
 // ROTA do Lancia Stratos
-app.get("/", (req, res) => {
-  res.render("LanciaStratos");
+app.get("/LanciaStratos", (req, res) => {
+    res.render("carros/LanciaStratos", {
+        stratosEventos: stratosEventos
+    });
 });
 
 // ROTA do Peugeot205
-app.get("/", (req, res) => {
-  res.render("Peugeot205");
+app.get("/Peugeot205", (req, res) => {
+    res.render("carros/Peugeot205", {
+        peugeotEventos: peugeotEventos
+    });
 });
-
 
 // Método para iniciar o servidor back-end
 const port = 3001;

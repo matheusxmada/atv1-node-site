@@ -1,0 +1,257 @@
+<!-- Página do Lancia Stratos -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lancia Stratos HF | RALLYHUB</title>
+
+    <!-- CSS geral -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- CSS exclusivo do Lancia Stratos -->
+    <link rel="stylesheet" href="/css/style-cars-stratos.css">
+</head>
+
+<body>
+
+    <!-- Incluindo a navbar -->
+    <%- include("../partials/navbar") %>
+
+
+        <main class="car-page">
+
+            <!-- Hero -->
+
+            <section class="car-hero stratos-hero">
+
+                <div class="car-hero-overlay"></div>
+
+                <div class="car-hero-content">
+
+                    <span class="car-page-number">
+                        04
+                    </span>
+
+                    <p class="car-page-category">
+                        GRUPO 4
+                    </p>
+
+                    <h1>
+                        LANCIA<br>
+                        <span>STRATOS HF</span>
+                    </h1>
+
+                    <p class="car-hero-description">
+                        Uma verdadeira lenda criada especialmente
+                        para as competições, marcando uma das eras
+                        mais importantes da história do Rally.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Descrição geral -->
+
+            <section class="car-content">
+
+                <div class="car-section-title">
+
+                    <span>
+                        HISTÓRIA
+                    </span>
+
+                    <h2>
+                        UMA LENDA FEITA PARA O RALLY
+                    </h2>
+
+                    <div class="title-line"></div>
+
+                </div>
+
+
+                <div class="car-history">
+
+                    <div class="car-history-text">
+
+                        <p>
+                            O Lancia Stratos HF foi desenvolvido
+                            especificamente para competir em Rally,
+                            tornando-se um dos primeiros automóveis
+                            projetados desde o início com esse objetivo.
+                        </p>
+
+                        <p>
+                            Com seu motor central, dimensões compactas
+                            e excelente distribuição de peso, o Stratos
+                            apresentava características ideais para
+                            enfrentar as exigentes provas de Rally.
+                        </p>
+
+                        <p>
+                            Durante a década de 1970, o modelo conquistou
+                            importantes vitórias no Campeonato Mundial
+                            de Rally e ajudou a estabelecer a Lancia
+                            como uma das grandes forças da modalidade.
+                        </p>
+
+                    </div>
+
+
+                    <div class="car-history-image">
+
+                        <img src="/images/lancia-stratos-wallpaper-2.webp" alt="Lancia Stratos HF">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- TABELA DE VITÓRIAS -->
+
+            <section class="rally-events-section">
+
+                <div class="rally-events-header">
+
+                    <span>
+                        COMPETIÇÕES
+                    </span>
+
+                    <h2>
+                        CONQUISTAS<br>
+                        DO STRATOS
+                    </h2>
+
+                    <p>
+                        Principais vitórias conquistadas pelo Lancia
+                        Stratos HF durante sua participação no
+                        Campeonato Mundial de Rally.
+                    </p>
+
+                </div>
+
+
+                <div class="rally-table-container">
+
+                    <table class="rally-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>#</th>
+
+                                <th>Evento</th>
+
+                                <th>Temporada</th>
+
+                                <th>Piloto</th>
+
+                                <th>Copiloto</th>
+
+                                <th>Versão</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <% stratosEventos.forEach((evento, index)=> { %>
+
+                                <tr>
+
+                                    <td class="event-number">
+                                        <%= index + 1 %>
+                                    </td>
+
+                                    <td class="event-name">
+                                        <%= evento.evento %>
+                                    </td>
+
+                                    <td class="event-season">
+                                        <%= evento.temporada %>
+                                    </td>
+
+                                    <td>
+                                        <%= evento.motorista %>
+                                    </td>
+
+                                    <td>
+                                        <%= evento.copiloto %>
+                                    </td>
+
+                                    <td class="event-version">
+                                        <%= evento.versao %>
+                                    </td>
+
+                                </tr>
+
+                                <% }); %>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- Legado -->
+
+            <section class="legacy-section">
+
+                <div class="legacy-overlay"></div>
+
+                <div class="legacy-content">
+
+                    <span>
+                        LEGADO
+                    </span>
+
+                    <h2>
+                        DESIGN.<br>
+                        INOVAÇÃO.<br>
+                        DOMÍNIO.
+                    </h2>
+
+                    <p>
+                        O Lancia Stratos HF representa uma das maiores
+                        expressões do desenvolvimento de carros
+                        especificamente projetados para o Rally,
+                        tornando-se uma das maiores lendas da modalidade.
+                    </p>
+
+                    <p>
+                        Seu sucesso nas competições internacionais
+                        ajudou a transformar o Stratos em um dos
+                        modelos mais reconhecidos da história do
+                        automobilismo.
+                    </p>
+
+                    <a href="/cars" class="back-button">
+                        ← VOLTAR AOS CARROS
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Incluindo o footer -->
+
+        <%- include("../partials/footer") %>
+
+</body>
+
+</html>
