@@ -1,5 +1,22 @@
 /* Página de estilização do site */
 
+/* Algumas configurações gerais */
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* Fazer ocm que o main opcupe toda a tela, colocando o footer sempre em baixo */
+main {
+    flex: 1;
+} 
+
+
 /* Body */
 
 body {
@@ -651,4 +668,749 @@ body {
     max-width: 100%;
   }
 
+}
+
+/* Estilização para a página de contatos */
+
+.contact-main {
+    min-height: calc(100vh - 80px);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.92),
+            rgba(0, 0, 0, 0.75)
+        );
+
+    color: #f5f5f5;
+}
+
+
+/* Hero dos contatoss */
+
+.contact-main .hero-content {
+    width: min(1400px, 82%);
+
+    min-height: 650px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: flex-start;
+}
+
+
+.contact-main .hero-subtitle {
+    color: #d10a04;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    letter-spacing: 5px;
+}
+
+
+.contact-main .hero-content h1 {
+    margin: 20px 0 0;
+
+    color: #f5f5f5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(70px, 8vw, 130px);
+
+    font-weight: 900;
+
+    line-height: 0.85;
+
+    letter-spacing: -4px;
+}
+
+
+.contact-main .hero-content h1 span {
+    color: #d10a04;
+}
+
+
+.contact-main .hero-text {
+    max-width: 650px;
+
+    margin-top: 35px;
+
+    color: #d0d0d0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* Botão do contatos */
+
+.contact-main .hero-button {
+    margin-top: 35px;
+}
+
+
+/* Seção do contato */
+
+.contact-section {
+    padding: 110px 0 130px;
+
+    background: #030303;
+
+    border-top: 3px solid #d10a04;
+}
+
+
+.contact-container {
+    width: min(1400px, 82%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+
+/* Informações do contato */
+
+.contact-subtitle {
+    margin: 0;
+
+    color: #d10a04;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    letter-spacing: 5px;
+}
+
+
+.contact-info h2 {
+    margin: 20px 0 30px;
+
+    color: #f5f5f5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(45px, 5vw, 75px);
+
+    line-height: 0.9;
+}
+
+
+.contact-info h2 span {
+    color: #d10a04;
+}
+
+
+.contact-info > p {
+    max-width: 500px;
+
+    color: #cfcfcf;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+.contact-detail {
+    margin-top: 45px;
+
+    padding-left: 20px;
+
+    border-left: 3px solid #d10a04;
+}
+
+
+.contact-detail strong {
+    color: #d10a04;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+
+.contact-detail p {
+    margin-top: 8px;
+
+    color: #ddd;
+
+    font-size: 15px;
+}
+
+
+/* Estilização do formulário dos contatos */
+
+.contact-form {
+    padding: 45px;
+
+    border: 1px solid #292929;
+
+    background: #080808;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.form-group label {
+    color: #d10a04;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 16px 18px;
+
+    border: 1px solid #333;
+
+    outline: none;
+
+    background: #111;
+
+    color: #f5f5f5;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    transition: border-color 0.3s ease;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #d10a04;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+/* Botão para o formulário dos contatos */
+
+.contact-button {
+    align-self: flex-start;
+
+    padding: 18px 28px;
+
+    border: 1px solid #d10a04;
+
+    background: #d10a04;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    font-size: 13px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.contact-button:hover {
+    background: transparent;
+
+    color: #d10a04;
+
+    transform: translateX(5px);
+}
+
+
+/* Responsividade da página de contatos*/
+
+@media (max-width: 900px) {
+
+    .contact-main .hero-content {
+        width: 88%;
+    }
+
+    .contact-container {
+        width: 88%;
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-main .hero-content {
+        width: 90%;
+
+        min-height: 550px;
+    }
+
+    .contact-main .hero-content h1 {
+        font-size: 65px;
+    }
+
+    .contact-main .hero-text {
+        font-size: 15px;
+    }
+
+    .contact-section {
+        padding: 75px 0 90px;
+    }
+
+    .contact-container {
+        width: 90%;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+}
+
+/* Página sobre nós */
+
+.about-main {
+    background: #030303;
+    color: #f5f5f5;
+}
+
+
+/* Hero do sobre nós */
+
+.about-hero {
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.94) 0%,
+            rgba(0, 0, 0, 0.75) 50%,
+            rgba(0, 0, 0, 0.45) 100%
+        ),
+        url("/images/wallpaper-3.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    border-bottom: 3px solid #d10a04;
+}
+
+
+.about-hero-content {
+    width: min(1400px, 82%);
+
+    margin: 0 auto;
+}
+
+
+.about-hero .hero-subtitle {
+    color: #d10a04;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    letter-spacing: 5px;
+}
+
+
+.about-hero h1 {
+    margin: 20px 0 0;
+
+    color: #f5f5f5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(70px, 8vw, 130px);
+
+    font-weight: 900;
+
+    line-height: 0.85;
+
+    letter-spacing: -4px;
+}
+
+
+.about-hero h1 span {
+    color: #d10a04;
+}
+
+
+.about-hero .hero-text {
+    max-width: 650px;
+
+    margin-top: 35px;
+
+    color: #d0d0d0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+.about-hero .hero-button {
+    margin-top: 35px;
+}
+
+
+/* Seção Sobre */
+
+.about-section {
+    padding: 110px 0 130px;
+
+    background: #030303;
+}
+
+
+.about-container {
+    width: min(1400px, 82%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+/* Texto do sobre nós */
+
+.about-subtitle {
+    margin: 0;
+
+    color: #d10a04;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    letter-spacing: 5px;
+}
+
+
+.about-text h2 {
+    margin: 20px 0 0;
+
+    color: #f5f5f5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(45px, 5vw, 75px);
+
+    font-weight: 900;
+
+    line-height: 0.9;
+}
+
+
+.about-text h2 span {
+    color: #d10a04;
+}
+
+
+.about-text .title-line {
+    width: 92px;
+    height: 5px;
+
+    margin-top: 28px;
+
+    background: #d10a04;
+}
+
+
+.about-text > p:not(.about-subtitle) {
+    max-width: 600px;
+
+    margin-top: 30px;
+
+    color: #cfcfcf;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+
+/* Imagem do sobre nós */
+
+.about-image {
+    padding: 15px;
+
+    border: 2px solid rgba(209, 10, 4, 0.45);
+}
+
+
+.about-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+
+/* Obejtivo do sobre nós */
+
+.about-objective {
+    width: 100%;
+    min-height: 730px;
+
+    background: #000;
+
+    overflow: hidden;
+}
+
+
+/* Divisão do container em duas colunas do sobre nós*/
+
+.about-objective-content {
+    width: 90%;
+    max-width: 1600px;
+    min-height: 730px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 55% 45%;
+
+    align-items: center;
+}
+
+
+/* Texto do sobre nós */
+
+.about-objective-text {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 70px 0;
+}
+
+
+.about-objective-text .about-subtitle {
+    margin-bottom: 20px;
+
+    color: #d10a04;
+
+    font-size: 16px;
+    font-weight: 900;
+
+    letter-spacing: 7px;
+}
+
+
+.about-objective h2 {
+    margin: 20px 0 0;
+
+    color: #f5f5f5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(55px, 6vw, 95px);
+
+    font-weight: 900;
+
+    line-height: 0.9;
+}
+
+
+.about-objective h2 span {
+    color: #d10a04;
+}
+
+
+/* Texto da seção do sobre nós */
+
+.about-objective-text > p:not(.about-subtitle) {
+    max-width: 750px;
+
+    margin-top: 35px;
+
+    color: #d0d0d0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+
+/* Botão do sobre nós */
+
+.about-objective .hero-button {
+    display: inline-flex;
+
+    margin-top: 40px;
+}
+
+
+/* Imagem do sobre nós */
+
+.about-objective-image {
+    position: relative;
+
+    width: 100%;
+    height: 650px;
+
+    overflow: hidden;
+}
+
+
+.about-objective-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* Gradiente para integrar a imagem com o fundo preto do sobre nós */
+
+.about-objective-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #000 0%,
+            rgba(0, 0, 0, 0.75) 10%,
+            rgba(0, 0, 0, 0.25) 35%,
+            rgba(0, 0, 0, 0.10) 100%
+        );
+}
+
+
+/* Responsividade da página do sobre nós */
+
+@media (max-width: 900px) {
+
+    .about-hero-content {
+        width: 88%;
+    }
+
+    .about-container {
+        width: 88%;
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+
+    .about-objective-content {
+        width: 88%;
+
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding: 70px 0;
+    }
+
+
+    .about-objective-image {
+        height: 400px;
+
+        margin-top: 50px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-objective-content {
+        width: 90%;
+    }
+
+
+    .about-objective h2 {
+        font-size: 48px;
+    }
+
+
+    .about-objective-text > p:not(.about-subtitle) {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+
+    .about-objective-image {
+        height: 320px;
+    }
+
+}
+.about-objective {
+    width: 100%;
+    min-height: 730px;
+
+    background: #000;
+
+    overflow: hidden;
 }
