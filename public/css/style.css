@@ -3,19 +3,18 @@
 /* Algumas configurações gerais */
 html,
 body {
-    min-height: 100%;
+  min-height: 100%;
 }
 
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 /* Fazer ocm que o main opcupe toda a tela, colocando o footer sempre em baixo */
 main {
-    flex: 1;
-} 
-
+  flex: 1;
+}
 
 /* Body */
 
@@ -23,8 +22,7 @@ body {
   margin: 0;
 
   background:
-    linear-gradient(rgba(18, 18, 18, 0.88),
-      rgba(18, 18, 18, 0.92)),
+    linear-gradient(rgba(18, 18, 18, 0.88), rgba(18, 18, 18, 0.92)),
     url("/images/wallpaper.jpg");
 
   background-size: cover;
@@ -33,7 +31,6 @@ body {
 
   color: #f5f5f5;
 }
-
 
 /* Navbar */
 
@@ -44,8 +41,7 @@ body {
 
   border-bottom: 3px solid #e10600;
 
-  box-shadow:
-    0 3px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-container {
@@ -126,7 +122,6 @@ body {
   }
 }
 
-
 /* Hero section */
 
 .hero {
@@ -137,8 +132,7 @@ body {
   text-align: center;
 
   background:
-    linear-gradient(rgba(18, 18, 18, 0.75),
-      rgba(18, 18, 18, 0.90)),
+    linear-gradient(rgba(18, 18, 18, 0.75), rgba(18, 18, 18, 0.9)),
     url("/images/");
 
   background-size: cover;
@@ -156,7 +150,6 @@ body {
 }
 
 .hero-button {
-
   position: relative;
   display: flex;
   align-items: center;
@@ -169,7 +162,9 @@ body {
   text-transform: uppercase;
   letter-spacing: 3px;
 
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
 .hero-button:hover {
@@ -203,7 +198,6 @@ body {
   background-color: #ffffff;
 }
 
-
 /* Grid de cards */
 
 .cars-grid {
@@ -214,7 +208,6 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
-
 
 /* Card base */
 
@@ -235,9 +228,7 @@ body {
   overflow: hidden;
 
   background-image:
-    linear-gradient(var(--card-overlay),
-      var(--card-overlay)),
-    var(--card-image);
+    linear-gradient(var(--card-overlay), var(--card-overlay)), var(--card-image);
   background-size: cover;
   background-position: center;
   border: 1px solid #333333;
@@ -247,17 +238,16 @@ body {
     transform 0.25s ease,
     border-color 0.25s ease,
     box-shadow 0.25s ease;
-    /* === Variáveis Personalizáveis */
-/* --card-color -> cor principal */
-/* --card-secondary -> cor secundária */
-/* --card-title -> título */
-/* --card-text -> descrição */
-/*--card-overlay -> fundo normal */
-/*/*--card-overlay-hover -> fundo no hover */
-/*--card-image -> imagem */
-/* --card-diagonal -> detalhe da diagonal */
+  /* === Variáveis Personalizáveis */
+  /* --card-color -> cor principal */
+  /* --card-secondary -> cor secundária */
+  /* --card-title -> título */
+  /* --card-text -> descrição */
+  /*--card-overlay -> fundo normal */
+  /*/*--card-overlay-hover -> fundo no hover */
+  /*--card-image -> imagem */
+  /* --card-diagonal -> detalhe da diagonal */
 }
-
 
 /* Linha superior que aparece ao colocar o mouse em cima*/
 
@@ -275,7 +265,6 @@ body {
 .car-card:hover::before {
   width: 100%;
 }
-
 
 /* Detalhe quina diagonal */
 
@@ -295,7 +284,6 @@ body {
   transform: rotate(45deg) scale(1.25);
 }
 
-
 /* Efeito hover */
 
 .car-card:hover {
@@ -303,14 +291,12 @@ body {
 
   box-shadow:
     0 15px 35px rgba(0, 0, 0, 0.45),
-    0 0 20px rgba(0, 0, 0, 0.20);
+    0 0 20px rgba(0, 0, 0, 0.2);
 
   background-image:
-    linear-gradient(var(--card-overlay-hover),
-      var(--card-overlay-hover)),
+    linear-gradient(var(--card-overlay-hover), var(--card-overlay-hover)),
     var(--card-image);
 }
-
 
 /* Número */
 
@@ -351,7 +337,6 @@ body {
   opacity: 0.7;
 }
 
-
 /* Títuçolo */
 
 .car-card h3 {
@@ -380,7 +365,6 @@ body {
   transform: translateY(0);
 }
 
-
 /* Descrição */
 
 .car-card p {
@@ -403,7 +387,6 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 /* Link */
 
@@ -452,13 +435,11 @@ body {
     0 0 25px rgba(170, 204, 0, 0.3);
 }
 
-
-
 /* Lancia Delta */
 
 .delta-card {
-  --card-color: #E30613;
-  --card-secondary: #0066B3;
+  --card-color: #e30613;
+  --card-secondary: #0066b3;
   --card-title: #ffffff;
   --card-text: #dddddd;
 
@@ -473,9 +454,8 @@ body {
 .delta-card:hover {
   box-shadow:
     0 15px 35px rgba(0, 0, 0, 0.55),
-    0 0 25px rgba(225, 6, 0, 0.30);
+    0 0 25px rgba(225, 6, 0, 0.3);
 }
-
 
 /* Subaru Impreza */
 
@@ -496,15 +476,14 @@ body {
 .subaru-card:hover {
   box-shadow:
     0 15px 35px rgba(0, 0, 0, 0.55),
-    0 0 25px rgba(0, 103, 177, 0.30);
+    0 0 25px rgba(0, 103, 177, 0.3);
 }
-
 
 /* Lancia Stratos */
 
 .stratos-card {
-  --card-color: #F2F1EC;
-  --card-secondary: #B52B28;
+  --card-color: #f2f1ec;
+  --card-secondary: #b52b28;
   --card-title: #ffffff;
   --card-text: #dddddd;
 
@@ -519,15 +498,14 @@ body {
 .stratos-card:hover {
   box-shadow:
     0 15px 35px rgba(0, 0, 0, 0.55),
-    0 0 25px rgba(255, 106, 0, 0.30);
+    0 0 25px rgba(255, 106, 0, 0.3);
 }
-
 
 /* Peugeot 205 */
 
 .peugeot-card {
-  --card-color: #E8E8E5;
-  --card-secondary: #155A9C;
+  --card-color: #e8e8e5;
+  --card-secondary: #155a9c;
   --card-title: #ffffff;
   --card-text: #dddddd;
 
@@ -544,20 +522,15 @@ body {
     0 0 25px rgba(249, 250, 251, 0.3);
 }
 
-
 /* REsponsividade dos cards*/
 
 @media (max-width: 1000px) {
-
   .cars-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
-
 @media (max-width: 600px) {
-
   .cars-grid {
     grid-template-columns: 1fr;
   }
@@ -575,9 +548,7 @@ body {
     font-size: 28px;
     padding: 0 20px;
   }
-
 }
-
 
 /* Footer */
 
@@ -656,9 +627,7 @@ body {
   font-size: 13px;
 }
 
-
 @media (max-width: 700px) {
-
   .footer-container {
     flex-direction: column;
     gap: 35px;
@@ -667,1165 +636,1307 @@ body {
   .footer-brand {
     max-width: 100%;
   }
-
 }
 
 /* Estilização para a página de contatos */
 
 .contact-main {
-    min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.92),
-            rgba(0, 0, 0, 0.75)
-        );
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.75));
 
-    color: #f5f5f5;
+  color: #f5f5f5;
 }
-
 
 /* Hero dos contatoss */
 
 .contact-main .hero-content {
-    width: min(1400px, 82%);
+  width: min(1400px, 82%);
 
-    min-height: 650px;
+  min-height: 650px;
 
-    margin: 0 auto;
+  margin: 0 auto;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    align-items: flex-start;
+  align-items: flex-start;
 }
-
 
 .contact-main .hero-subtitle {
-    color: #d10a04;
+  color: #d10a04;
 
-    font-size: 14px;
-    font-weight: 900;
+  font-size: 14px;
+  font-weight: 900;
 
-    letter-spacing: 5px;
+  letter-spacing: 5px;
 }
-
 
 .contact-main .hero-content h1 {
-    margin: 20px 0 0;
+  margin: 20px 0 0;
 
-    color: #f5f5f5;
+  color: #f5f5f5;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(70px, 8vw, 130px);
+  font-size: clamp(70px, 8vw, 130px);
 
-    font-weight: 900;
+  font-weight: 900;
 
-    line-height: 0.85;
+  line-height: 0.85;
 
-    letter-spacing: -4px;
+  letter-spacing: -4px;
 }
-
 
 .contact-main .hero-content h1 span {
-    color: #d10a04;
+  color: #d10a04;
 }
-
 
 .contact-main .hero-text {
-    max-width: 650px;
+  max-width: 650px;
 
-    margin-top: 35px;
+  margin-top: 35px;
 
-    color: #d0d0d0;
+  color: #d0d0d0;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 17px;
+  font-size: 17px;
 
-    line-height: 1.8;
+  line-height: 1.8;
 }
-
 
 /* Botão do contatos */
 
 .contact-main .hero-button {
-    margin-top: 35px;
+  margin-top: 35px;
 }
-
 
 /* Seção do contato */
 
 .contact-section {
-    padding: 110px 0 130px;
+  padding: 110px 0 130px;
 
-    background: #030303;
+  background: #030303;
 
-    border-top: 3px solid #d10a04;
+  border-top: 3px solid #d10a04;
 }
-
 
 .contact-container {
-    width: min(1400px, 82%);
+  width: min(1400px, 82%);
 
-    margin: 0 auto;
+  margin: 0 auto;
 
-    display: grid;
+  display: grid;
 
-    grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 0.8fr 1.2fr;
 
-    gap: 100px;
+  gap: 100px;
 
-    align-items: start;
+  align-items: start;
 }
-
 
 /* Informações do contato */
 
 .contact-subtitle {
-    margin: 0;
+  margin: 0;
 
-    color: #d10a04;
+  color: #d10a04;
 
-    font-size: 14px;
-    font-weight: 900;
+  font-size: 14px;
+  font-weight: 900;
 
-    letter-spacing: 5px;
+  letter-spacing: 5px;
 }
-
 
 .contact-info h2 {
-    margin: 20px 0 30px;
+  margin: 20px 0 30px;
 
-    color: #f5f5f5;
+  color: #f5f5f5;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(45px, 5vw, 75px);
+  font-size: clamp(45px, 5vw, 75px);
 
-    line-height: 0.9;
+  line-height: 0.9;
 }
-
 
 .contact-info h2 span {
-    color: #d10a04;
+  color: #d10a04;
 }
-
 
 .contact-info > p {
-    max-width: 500px;
+  max-width: 500px;
 
-    color: #cfcfcf;
+  color: #cfcfcf;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 17px;
+  font-size: 17px;
 
-    line-height: 1.8;
+  line-height: 1.8;
 }
-
 
 .contact-detail {
-    margin-top: 45px;
+  margin-top: 45px;
 
-    padding-left: 20px;
+  padding-left: 20px;
 
-    border-left: 3px solid #d10a04;
+  border-left: 3px solid #d10a04;
 }
-
 
 .contact-detail strong {
-    color: #d10a04;
+  color: #d10a04;
 
-    font-size: 12px;
+  font-size: 12px;
 
-    letter-spacing: 3px;
+  letter-spacing: 3px;
 }
-
 
 .contact-detail p {
-    margin-top: 8px;
+  margin-top: 8px;
 
-    color: #ddd;
+  color: #ddd;
 
-    font-size: 15px;
+  font-size: 15px;
 }
-
 
 /* Estilização do formulário dos contatos */
 
 .contact-form {
-    padding: 45px;
+  padding: 45px;
 
-    border: 1px solid #292929;
+  border: 1px solid #292929;
 
-    background: #080808;
+  background: #080808;
 
-    display: flex;
+  display: flex;
 
-    flex-direction: column;
+  flex-direction: column;
 
-    gap: 25px;
+  gap: 25px;
 }
-
 
 .form-group {
-    display: flex;
+  display: flex;
 
-    flex-direction: column;
+  flex-direction: column;
 
-    gap: 10px;
+  gap: 10px;
 }
-
 
 .form-group label {
-    color: #d10a04;
+  color: #d10a04;
 
-    font-size: 12px;
-    font-weight: 900;
+  font-size: 12px;
+  font-weight: 900;
 
-    letter-spacing: 2px;
+  letter-spacing: 2px;
 }
-
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
+  width: 100%;
 
-    box-sizing: border-box;
+  box-sizing: border-box;
 
-    padding: 16px 18px;
+  padding: 16px 18px;
 
-    border: 1px solid #333;
+  border: 1px solid #333;
 
-    outline: none;
+  outline: none;
 
-    background: #111;
+  background: #111;
 
-    color: #f5f5f5;
+  color: #f5f5f5;
 
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
-    font-size: 15px;
+  font-size: 15px;
 
-    transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
 }
-
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #d10a04;
+  border-color: #d10a04;
 }
-
 
 .form-group textarea {
-    resize: vertical;
+  resize: vertical;
 }
-
 
 /* Botão para o formulário dos contatos */
 
 .contact-button {
-    align-self: flex-start;
+  align-self: flex-start;
 
-    padding: 18px 28px;
+  padding: 18px 28px;
 
-    border: 1px solid #d10a04;
+  border: 1px solid #d10a04;
 
-    background: #d10a04;
+  background: #d10a04;
 
-    color: #fff;
+  color: #fff;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    font-size: 13px;
-    font-weight: 900;
+  font-size: 13px;
+  font-weight: 900;
 
-    letter-spacing: 1px;
+  letter-spacing: 1px;
 
-    transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
-
 
 .contact-button:hover {
-    background: transparent;
+  background: transparent;
 
-    color: #d10a04;
+  color: #d10a04;
 
-    transform: translateX(5px);
+  transform: translateX(5px);
 }
-
 
 /* Responsividade da página de contatos*/
 
 @media (max-width: 900px) {
+  .contact-main .hero-content {
+    width: 88%;
+  }
 
-    .contact-main .hero-content {
-        width: 88%;
-    }
+  .contact-container {
+    width: 88%;
 
-    .contact-container {
-        width: 88%;
+    grid-template-columns: 1fr;
 
-        grid-template-columns: 1fr;
-
-        gap: 60px;
-    }
-
+    gap: 60px;
+  }
 }
 
-
 @media (max-width: 600px) {
+  .contact-main .hero-content {
+    width: 90%;
 
-    .contact-main .hero-content {
-        width: 90%;
+    min-height: 550px;
+  }
 
-        min-height: 550px;
-    }
+  .contact-main .hero-content h1 {
+    font-size: 65px;
+  }
 
-    .contact-main .hero-content h1 {
-        font-size: 65px;
-    }
+  .contact-main .hero-text {
+    font-size: 15px;
+  }
 
-    .contact-main .hero-text {
-        font-size: 15px;
-    }
+  .contact-section {
+    padding: 75px 0 90px;
+  }
 
-    .contact-section {
-        padding: 75px 0 90px;
-    }
+  .contact-container {
+    width: 90%;
+  }
 
-    .contact-container {
-        width: 90%;
-    }
-
-    .contact-form {
-        padding: 25px;
-    }
-
+  .contact-form {
+    padding: 25px;
+  }
 }
 
 /* Página sobre nós */
 
 .about-main {
-    background: #030303;
-    color: #f5f5f5;
+  background: #030303;
+  color: #f5f5f5;
 }
-
 
 /* Hero do sobre nós */
 
 .about-hero {
-    position: relative;
+  position: relative;
 
-    min-height: 650px;
+  min-height: 650px;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.94) 0%,
-            rgba(0, 0, 0, 0.75) 50%,
-            rgba(0, 0, 0, 0.45) 100%
-        ),
-        url("/images/wallpaper-3.jpg");
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.94) 0%,
+      rgba(0, 0, 0, 0.75) 50%,
+      rgba(0, 0, 0, 0.45) 100%
+    ),
+    url("/images/wallpaper-3.jpg");
 
-    background-size: cover;
-    background-position: center;
+  background-size: cover;
+  background-position: center;
 
-    border-bottom: 3px solid #d10a04;
+  border-bottom: 3px solid #d10a04;
 }
-
 
 .about-hero-content {
-    width: min(1400px, 82%);
+  width: min(1400px, 82%);
 
-    margin: 0 auto;
+  margin: 0 auto;
 }
-
 
 .about-hero .hero-subtitle {
-    color: #d10a04;
+  color: #d10a04;
 
-    font-size: 14px;
-    font-weight: 900;
+  font-size: 14px;
+  font-weight: 900;
 
-    letter-spacing: 5px;
+  letter-spacing: 5px;
 }
-
 
 .about-hero h1 {
-    margin: 20px 0 0;
+  margin: 20px 0 0;
 
-    color: #f5f5f5;
+  color: #f5f5f5;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(70px, 8vw, 130px);
+  font-size: clamp(70px, 8vw, 130px);
 
-    font-weight: 900;
+  font-weight: 900;
 
-    line-height: 0.85;
+  line-height: 0.85;
 
-    letter-spacing: -4px;
+  letter-spacing: -4px;
 }
-
 
 .about-hero h1 span {
-    color: #d10a04;
+  color: #d10a04;
 }
-
 
 .about-hero .hero-text {
-    max-width: 650px;
+  max-width: 650px;
 
-    margin-top: 35px;
+  margin-top: 35px;
 
-    color: #d0d0d0;
+  color: #d0d0d0;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 17px;
+  font-size: 17px;
 
-    line-height: 1.8;
+  line-height: 1.8;
 }
-
 
 .about-hero .hero-button {
-    margin-top: 35px;
+  margin-top: 35px;
 }
-
 
 /* Seção Sobre */
 
 .about-section {
-    padding: 110px 0 130px;
+  padding: 110px 0 130px;
 
-    background: #030303;
+  background: #030303;
 }
-
 
 .about-container {
-    width: min(1400px, 82%);
+  width: min(1400px, 82%);
 
-    margin: 0 auto;
+  margin: 0 auto;
 
-    display: grid;
+  display: grid;
 
-    grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 
-    gap: 80px;
+  gap: 80px;
 
-    align-items: center;
+  align-items: center;
 }
-
 
 /* Texto do sobre nós */
 
 .about-subtitle {
-    margin: 0;
+  margin: 0;
 
-    color: #d10a04;
+  color: #d10a04;
 
-    font-size: 14px;
-    font-weight: 900;
+  font-size: 14px;
+  font-weight: 900;
 
-    letter-spacing: 5px;
+  letter-spacing: 5px;
 }
-
 
 .about-text h2 {
-    margin: 20px 0 0;
+  margin: 20px 0 0;
 
-    color: #f5f5f5;
+  color: #f5f5f5;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(45px, 5vw, 75px);
+  font-size: clamp(45px, 5vw, 75px);
 
-    font-weight: 900;
+  font-weight: 900;
 
-    line-height: 0.9;
+  line-height: 0.9;
 }
-
 
 .about-text h2 span {
-    color: #d10a04;
+  color: #d10a04;
 }
-
 
 .about-text .title-line {
-    width: 92px;
-    height: 5px;
+  width: 92px;
+  height: 5px;
 
-    margin-top: 28px;
+  margin-top: 28px;
 
-    background: #d10a04;
+  background: #d10a04;
 }
-
 
 .about-text > p:not(.about-subtitle) {
-    max-width: 600px;
+  max-width: 600px;
 
-    margin-top: 30px;
+  margin-top: 30px;
 
-    color: #cfcfcf;
+  color: #cfcfcf;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 17px;
+  font-size: 17px;
 
-    line-height: 1.9;
+  line-height: 1.9;
 }
-
 
 /* Imagem do sobre nós */
 
 .about-image {
-    padding: 15px;
+  padding: 15px;
 
-    border: 2px solid rgba(209, 10, 4, 0.45);
+  border: 2px solid rgba(209, 10, 4, 0.45);
 }
-
 
 .about-image img {
-    display: block;
+  display: block;
 
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 
-    object-fit: cover;
+  object-fit: cover;
 }
-
 
 /* Obejtivo do sobre nós */
 
 .about-objective {
-    width: 100%;
-    min-height: 730px;
+  width: 100%;
+  min-height: 730px;
 
-    background: #000;
+  background: #000;
 
-    overflow: hidden;
+  overflow: hidden;
 }
-
 
 /* Divisão do container em duas colunas do sobre nós*/
 
 .about-objective-content {
-    width: 90%;
-    max-width: 1600px;
-    min-height: 730px;
+  width: 90%;
+  max-width: 1600px;
+  min-height: 730px;
 
-    margin: 0 auto;
+  margin: 0 auto;
 
-    display: grid;
-    grid-template-columns: 55% 45%;
+  display: grid;
+  grid-template-columns: 55% 45%;
 
-    align-items: center;
+  align-items: center;
 }
-
 
 /* Texto do sobre nós */
 
 .about-objective-text {
-    position: relative;
+  position: relative;
 
-    z-index: 2;
+  z-index: 2;
 
-    padding: 70px 0;
+  padding: 70px 0;
 }
-
 
 .about-objective-text .about-subtitle {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    color: #d10a04;
+  color: #d10a04;
 
-    font-size: 16px;
-    font-weight: 900;
+  font-size: 16px;
+  font-weight: 900;
 
-    letter-spacing: 7px;
+  letter-spacing: 7px;
 }
-
 
 .about-objective h2 {
-    margin: 20px 0 0;
+  margin: 20px 0 0;
 
-    color: #f5f5f5;
+  color: #f5f5f5;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(55px, 6vw, 95px);
+  font-size: clamp(55px, 6vw, 95px);
 
-    font-weight: 900;
+  font-weight: 900;
 
-    line-height: 0.9;
+  line-height: 0.9;
 }
-
 
 .about-objective h2 span {
-    color: #d10a04;
+  color: #d10a04;
 }
-
 
 /* Texto da seção do sobre nós */
 
 .about-objective-text > p:not(.about-subtitle) {
-    max-width: 750px;
+  max-width: 750px;
 
-    margin-top: 35px;
+  margin-top: 35px;
 
-    color: #d0d0d0;
+  color: #d0d0d0;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 17px;
+  font-size: 17px;
 
-    line-height: 1.9;
+  line-height: 1.9;
 }
-
 
 /* Botão do sobre nós */
 
 .about-objective .hero-button {
-    display: inline-flex;
+  display: inline-flex;
 
-    margin-top: 40px;
+  margin-top: 40px;
 }
-
 
 /* Imagem do sobre nós */
 
 .about-objective-image {
-    position: relative;
+  position: relative;
 
-    width: 100%;
-    height: 650px;
+  width: 100%;
+  height: 650px;
 
-    overflow: hidden;
+  overflow: hidden;
 }
-
 
 .about-objective-image img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    display: block;
+  display: block;
 
-    object-fit: cover;
+  object-fit: cover;
 }
-
 
 /* Gradiente para integrar a imagem com o fundo preto do sobre nós */
 
 .about-objective-image::after {
-    content: "";
+  content: "";
 
-    position: absolute;
+  position: absolute;
 
-    inset: 0;
+  inset: 0;
 
-    background:
-        linear-gradient(
-            90deg,
-            #000 0%,
-            rgba(0, 0, 0, 0.75) 10%,
-            rgba(0, 0, 0, 0.25) 35%,
-            rgba(0, 0, 0, 0.10) 100%
-        );
+  background: linear-gradient(
+    90deg,
+    #000 0%,
+    rgba(0, 0, 0, 0.75) 10%,
+    rgba(0, 0, 0, 0.25) 35%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
 }
-
 
 /* Responsividade da página do sobre nós */
 
 @media (max-width: 900px) {
+  .about-hero-content {
+    width: 88%;
+  }
 
-    .about-hero-content {
-        width: 88%;
-    }
+  .about-container {
+    width: 88%;
 
-    .about-container {
-        width: 88%;
+    grid-template-columns: 1fr;
 
-        grid-template-columns: 1fr;
+    gap: 60px;
+  }
 
-        gap: 60px;
-    }
+  .about-objective-content {
+    width: 88%;
 
+    grid-template-columns: 1fr;
 
-    .about-objective-content {
-        width: 88%;
+    min-height: auto;
 
-        grid-template-columns: 1fr;
+    padding: 70px 0;
+  }
 
-        min-height: auto;
+  .about-objective-image {
+    height: 400px;
 
-        padding: 70px 0;
-    }
-
-
-    .about-objective-image {
-        height: 400px;
-
-        margin-top: 50px;
-    }
-
+    margin-top: 50px;
+  }
 }
-
 
 @media (max-width: 600px) {
+  .about-objective-content {
+    width: 90%;
+  }
 
-    .about-objective-content {
-        width: 90%;
-    }
+  .about-objective h2 {
+    font-size: 48px;
+  }
 
+  .about-objective-text > p:not(.about-subtitle) {
+    font-size: 15px;
 
-    .about-objective h2 {
-        font-size: 48px;
-    }
+    line-height: 1.8;
+  }
 
-
-    .about-objective-text > p:not(.about-subtitle) {
-        font-size: 15px;
-
-        line-height: 1.8;
-    }
-
-
-    .about-objective-image {
-        height: 320px;
-    }
-
+  .about-objective-image {
+    height: 320px;
+  }
 }
 .about-objective {
-    width: 100%;
-    min-height: 730px;
+  width: 100%;
+  min-height: 730px;
 
-    background: #000;
+  background: #000;
 
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /* Estilização da página de Outros Tópicos */
 
 .other-main {
-    width: 100%;
+  width: 100%;
 
-    background: #000;
+  background: #000;
 
-    color: #f5f5f5;
+  color: #f5f5f5;
 }
 
 /* Hero da página Outros Tópicos */
 
 .other-hero {
-     width: 100%;
-    min-height: 550px;
+  width: 100%;
+  min-height: 550px;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.95),
-            rgba(0, 0, 0, 0.65),
-            rgba(0, 0, 0, 0.25)
-        ),
-        url("/images/wallpaper-9.jpg");
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.95),
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.25)
+    ),
+    url("/images/wallpaper-9.jpg");
 
-    background-size: cover;
-    background-position: center;
+  background-size: cover;
+  background-position: center;
 
-    border-bottom: 3px solid #d10a04;
+  border-bottom: 3px solid #d10a04;
 }
-
 
 .other-hero-content {
-    width: 90%;
-    max-width: 1500px;
-    color: #d10a04;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1500px;
+  color: #d10a04;
+  margin: 0 auto;
 }
-
 
 .other-hero h1 {
-    margin: 20px 0 0;
+  margin: 20px 0 0;
 
-    color: #f5f5f5;
+  color: #f5f5f5;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(65px, 7vw, 120px);
+  font-size: clamp(65px, 7vw, 120px);
 
-    font-weight: 900;
+  font-weight: 900;
 
-    line-height: 0.85;
+  line-height: 0.85;
 
-    letter-spacing: -4px;
+  letter-spacing: -4px;
 }
-
 
 .other-hero h1 span {
-    color: #d10a04;
+  color: #d10a04;
 
-    font-weight: bold;
+  font-weight: bold;
 }
 
-
 .other-hero .hero-text {
-    max-width: 700px;
+  max-width: 700px;
 
-    margin-top: 40px;
+  margin-top: 40px;
 
-    color: #d0d0d0;
+  color: #d0d0d0;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 18px;
+  font-size: 18px;
 
-    line-height: 1.8;
+  line-height: 1.8;
 }
 
 /* Seção dos Outros Tópicos */
 
 .other-topics {
-    width: 100%;
+  width: 100%;
 
-    padding: 100px 0 130px;
+  padding: 100px 0 130px;
 
-    background: #030303;
+  background: #030303;
 }
-
 
 .other-topics-header {
-    width: 90%;
-    max-width: 1500px;
+  width: 90%;
+  max-width: 1500px;
 
-    margin: 0 auto 65px;
+  margin: 0 auto 65px;
 }
-
 
 .other-topics-header .about-subtitle {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    color: #d10a04;
+  color: #d10a04;
 
-    font-size: 14px;
-    font-weight: 900;
+  font-size: 14px;
+  font-weight: 900;
 
-    letter-spacing: 5px;
+  letter-spacing: 5px;
 }
-
 
 .other-topics-header h2 {
-    margin: 0;
+  margin: 0;
 
-    color: #f5f5f5;
+  color: #f5f5f5;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(50px, 5vw, 80px);
+  font-size: clamp(50px, 5vw, 80px);
 
-    font-weight: 900;
+  font-weight: 900;
 
-    line-height: 0.9;
+  line-height: 0.9;
 }
-
 
 .other-topics-header h2 span {
-    color: #d10a04;
+  color: #d10a04;
 }
 
+.other-topics-header > p:last-child {
+  /* > é um combinador de filho direto, indicando que o filho procurado deve ser uma tag <p>, enquanto :last-child filtra para que a regra seja aplicada apenas se o parágrafo for o último dentro do elemento pai.*/
+  max-width: 750px;
 
-.other-topics-header > p:last-child { /* > é um combinador de filho direto, indicando que o filho procurado deve ser uma tag <p>, enquanto :last-child filtra para que a regra seja aplicada apenas se o parágrafo for o último dentro do elemento pai.*/
-    max-width: 750px;
+  margin-top: 30px;
 
-    margin-top: 30px;
+  color: #cfcfcf;
 
-    color: #cfcfcf;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
 
-    font-size: 17px;
-
-    line-height: 1.8;
+  line-height: 1.8;
 }
-
 
 .title-line {
-    width: 90px;
-    height: 5px;
+  width: 90px;
+  height: 5px;
 
-    margin-top: 25px;
+  margin-top: 25px;
 
-    background: #d10a04;
+  background: #d10a04;
 }
 
 /* Cards dos Outros Tópicos */
 
 .other-cards {
-    width: 90%;
-    max-width: 1500px;
+  width: 90%;
+  max-width: 1500px;
 
-    margin: 0 auto;
+  margin: 0 auto;
 
-    display: grid;
+  display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
-    gap: 25px;
+  gap: 25px;
 }
 
 /* Card */
 
 .other-card {
-    position: relative;
+  position: relative;
 
-    min-height: 520px;
+  min-height: 520px;
 
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    color: #fff;
+  color: #fff;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    background: #080808;
+  background: #080808;
 
-    border: 1px solid #292929;
+  border: 1px solid #292929;
 
-    transition:
-        transform 0.4s ease,
-        border-color 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
 }
 
 /* Estilização da imagem de Outros Tópicos */
 .other-card-image {
-    position: absolute;
+  position: absolute;
 
-    inset: 0;
+  inset: 0;
 
-    overflow: hidden;
+  overflow: hidden;
 }
 
-
 .other-card-image img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    display: block;
+  display: block;
 
-    object-fit: cover;
+  object-fit: cover;
 
-    transition:
-        transform 0.6s ease;
+  transition: transform 0.6s ease;
 }
 
 /* Efeito de overlay na página Outros Tópicos */
 
 .other-card-overlay {
-    position: absolute;
+  position: absolute;
 
-    inset: 0;
+  inset: 0;
 
-    background:
-        linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.10) 0%,
-            rgba(0, 0, 0, 0.25) 35%,
-            rgba(0, 0, 0, 0.92) 100%
-        );
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.25) 35%,
+    rgba(0, 0, 0, 0.92) 100%
+  );
 
-    transition:
-        background 0.4s ease;
+  transition: background 0.4s ease;
 }
 
 /* Estilziando o conteúdo da página Outros Tópicos */
 
 .other-card-content {
-    position: relative;
+  position: relative;
 
-    z-index: 2;
+  z-index: 2;
 
-    width: 100%;
+  width: 100%;
 
-    padding: 35px;
+  padding: 35px;
 }
-
 
 .other-card-content > span:first-child {
-    display: block;
+  display: block;
 
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 
-    color: #d10a04;
+  color: #d10a04;
 
-    font-size: 12px;
+  font-size: 12px;
 
-    font-weight: 900;
+  font-weight: 900;
 
-    letter-spacing: 4px;
+  letter-spacing: 4px;
 }
-
 
 .other-card-content h3 {
-    margin: 0;
+  margin: 0;
 
-    color: #f5f5f5;
+  color: #f5f5f5;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 42px;
+  font-size: 42px;
 
-    font-weight: 900;
+  font-weight: 900;
 
-    line-height: 0.95;
+  line-height: 0.95;
 }
-
 
 .other-card-content h3 strong {
-    color: #d10a04;
+  color: #d10a04;
 }
-
 
 .other-card-content p {
-    max-width: 400px;
+  max-width: 400px;
 
-    margin-top: 25px;
+  margin-top: 25px;
 
-    color: #d5d5d5;
+  color: #d5d5d5;
 
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 15px;
+  font-size: 15px;
 
-    line-height: 1.7;
+  line-height: 1.7;
 }
 
-
 .other-card-link {
-    display: inline-block;
+  display: inline-block;
 
-    margin-top: 25px;
+  margin-top: 25px;
 
-    color: #fff;
+  color: #fff;
 
-    font-size: 13px;
+  font-size: 13px;
 
-    font-weight: 900;
+  font-weight: 900;
 
-    letter-spacing: 2px;
+  letter-spacing: 2px;
 
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 /* Criando o efeito Hover da página Outros Tópicos */
 
 .other-card:hover {
-    transform: translateY(-8px);
+  transform: translateY(-8px);
 
-    border-color: #d10a04;
-
+  border-color: #d10a04;
 }
-
 
 .other-card:hover .other-card-image img {
-    transform: scale(1.08);
+  transform: scale(1.08);
 }
-
 
 .other-card:hover .other-card-overlay {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.05) 0%,
-            rgba(0, 0, 0, 0.20) 30%,
-            rgba(0, 0, 0, 0.95) 100%
-        );
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
 }
 
-
 .other-card:hover .other-card-link {
-    color: #d10a04;
+  color: #d10a04;
 
-    transform: translateX(6px);
+  transform: translateX(6px);
 }
 
 /* Responsividade na página Outros Tópicos */
 
 @media (max-width: 1000px) {
+  .other-cards {
+    grid-template-columns: 1fr;
+  }
 
-    .other-cards {
-        grid-template-columns: 1fr;
-    }
-
-
-    .other-card {
-        min-height: 450px;
-    }
-
+  .other-card {
+    min-height: 450px;
+  }
 }
 
+@media (max-width: 600px) {
+  .other-hero {
+    min-height: 500px;
+  }
+
+  .other-hero-content {
+    width: 88%;
+  }
+
+  .other-hero h1 {
+    font-size: 58px;
+  }
+
+  .other-topics {
+    padding: 75px 0 90px;
+  }
+
+  .other-topics-header {
+    width: 88%;
+  }
+
+  .other-cards {
+    width: 88%;
+  }
+
+  .other-card {
+    min-height: 420px;
+  }
+
+  .other-card-content {
+    padding: 25px;
+  }
+
+  .other-card-content h3 {
+    font-size: 34px;
+  }
+}
+
+/* Estilização da página FAQ */
+
+.faq-section {
+  width: 100%;
+  padding: 100px 0 130px;
+  background: #030303;
+}
+
+.faq-container {
+  width: min(1100px, 82%);
+  margin: 0 auto;
+}
+
+/* Itemm FAQ */
+
+.faq-item {
+  position: relative;
+
+  padding: 30px 0;
+
+  border-bottom: 1px solid #292929;
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Primeira linha FAQ */
+
+.faq-item:first-child {
+  border-top: 1px solid #292929;
+}
+
+/* Pergunta FAQ */
+
+.faq-item h3 {
+  margin: 0;
+
+  color: #f5f5f5;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+  font-weight: 900;
+
+  line-height: 1.3;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Número da pergunta FAQ */
+
+.faq-item h3::first-letter {
+  color: #d10a04;
+}
+
+/* Resposta FAQ */
+
+.faq-item p {
+  max-width: 900px;
+
+  margin: 18px 0 0;
+
+  color: #bdbdbd;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+/* Efeito hover FAQ */
+
+.faq-item:hover {
+  border-color: #d10a04;
+}
+
+.faq-item:hover h3 {
+  color: #d10a04;
+
+  transform: translateX(6px);
+}
+
+/* Linha vermelha lateral FAQ */
+
+.faq-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: -15px;
+  top: 30px;
+
+  width: 3px;
+  height: 0;
+
+  background: #d10a04;
+
+  transition: height 0.3s ease;
+}
+
+/* Responsividadee FAQ */
 
 @media (max-width: 600px) {
+  .faq-section {
+    padding: 75px 0 90px;
+  }
 
-    .other-hero {
-        min-height: 500px;
-    }
+  .faq-container {
+    width: 90%;
+  }
 
+  .faq-item {
+    padding: 25px 0;
+  }
 
-    .other-hero-content {
-        width: 88%;
-    }
+  .faq-item h3 {
+    font-size: 20px;
+  }
 
+  .faq-item p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
 
-    .other-hero h1 {
-        font-size: 58px;
-    }
+/* Estilização dap ágina Política de Privacidade */
 
+.privacy-main {
+  min-height: calc(100vh - 80px);
 
-    .other-topics {
-        padding: 75px 0 90px;
-    }
+  background: #030303;
 
+  color: #f5f5f5;
+}
 
-    .other-topics-header {
-        width: 88%;
-    }
+.privacy-section {
+  min-height: 650px;
 
+  display: flex;
+  align-items: center;
 
-    .other-cards {
-        width: 88%;
-    }
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.94) 0%,
+      rgba(0, 0, 0, 0.8) 50%,
+      rgba(0, 0, 0, 0.45) 100%
+    ),
+    url("/images/wallpaper-11.jpg");
 
+  background-size: cover;
+  background-position: center;
 
-    .other-card {
-        min-height: 420px;
-    }
+  border-bottom: 3px solid #d10a04;
+}
 
+.privacy-container {
+  width: min(1200px, 82%);
 
-    .other-card-content {
-        padding: 25px;
-    }
+  margin: 0 auto;
+}
 
+/* Subtítulo da Política de Privacidade */
 
-    .other-card-content h3 {
-        font-size: 34px;
-    }
+.privacy-subtitle {
+  margin: 0 0 20px;
 
+  color: #d10a04;
+
+  font-size: 14px;
+
+  font-weight: 900;
+
+  letter-spacing: 5px;
+}
+
+/* Título da Política de Privacidade */
+
+.privacy-container h1 {
+  margin: 0;
+
+  color: #f5f5f5;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(60px, 7vw, 110px);
+
+  font-weight: 900;
+
+  line-height: 0.88;
+
+  letter-spacing: -4px;
+}
+
+.privacy-container h1 span {
+  color: #d10a04;
+}
+
+/* Linhas da Política de Privacidade */
+
+.privacy-container .title-line {
+  width: 92px;
+
+  height: 5px;
+
+  margin: 30px 0 35px;
+
+  background: #d10a04;
+}
+
+/* Texto da Política de Privacidade */
+
+.privacy-text {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #cfcfcf;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 17px;
+
+  line-height: 1.9;
+}
+
+/* Responsividade de Política de Privacidade*/
+
+@media (max-width: 600px) {
+  .privacy-section {
+    min-height: 550px;
+  }
+
+  .privacy-container {
+    width: 90%;
+  }
+
+  .privacy-container h1 {
+    font-size: 52px;
+
+    letter-spacing: -2px;
+  }
+
+  .privacy-text {
+    font-size: 15px;
+
+    line-height: 1.8;
+  }
 }
