@@ -238,7 +238,9 @@ body {
     transform 0.25s ease,
     border-color 0.25s ease,
     box-shadow 0.25s ease;
-  /* === Variáveis Personalizáveis */
+
+  /* Variáveis Personalizáveis para os cards no grid */
+  
   /* --card-color -> cor principal */
   /* --card-secondary -> cor secundária */
   /* --card-title -> título */
