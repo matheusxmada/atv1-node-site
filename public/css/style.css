@@ -1839,7 +1839,7 @@ body {
       rgba(0, 0, 0, 0.8) 50%,
       rgba(0, 0, 0, 0.45) 100%
     ),
-    url("/images/wallpaper-11.jpg");
+    url("/images/wallpaper-13.jpeg");
 
   background-size: cover;
   background-position: center;
@@ -1939,4 +1939,410 @@ body {
 
     line-height: 1.8;
   }
+}
+
+/* Pagina de Créditos */
+
+.credits-main {
+    width: 100%;
+
+    background: #030303;
+
+    color: #f5f5f5;
+}
+
+
+/* Hero dos Créditos */
+
+.credits-hero {
+    position: relative;
+
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.78) 50%,
+            rgba(0, 0, 0, 0.40) 100%
+        ),
+        url("/images/wallpaper-11.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    border-bottom: 3px solid #d10a04;
+}
+
+
+.credits-hero-content {
+    width: min(1400px, 82%);
+
+    margin: 0 auto;
+}
+
+
+/* Subtítulo dos Créditos */
+
+.credits-subtitle {
+    margin: 0;
+
+    color: #d10a04;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
+}
+
+
+/* Título dos Créditos */
+
+.credits-hero h1 {
+    margin: 20px 0 0;
+
+    color: #f5f5f5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(70px, 8vw, 130px);
+
+    font-weight: 900;
+
+    line-height: 0.85;
+
+    letter-spacing: -4px;
+}
+
+
+.credits-hero h1 span {
+    color: #d10a04;
+}
+
+
+/* Texto dos Créditos */
+
+.credits-hero-text {
+    max-width: 650px;
+
+    margin-top: 35px;
+
+    color: #d0d0d0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* Seção de Créditos */
+
+.credits-section {
+    width: 100%;
+
+    padding: 110px 0 130px;
+
+    background: #030303;
+}
+
+
+.credits-container {
+    width: min(1400px, 82%);
+
+    margin: 0 auto;
+}
+
+
+/* Cabeçalho dos Créditos */
+
+.credits-header {
+    margin-bottom: 65px;
+}
+
+
+.credits-header h2 {
+    margin: 20px 0 0;
+
+    color: #f5f5f5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(50px, 5vw, 80px);
+
+    font-weight: 900;
+
+    line-height: 0.9;
+}
+
+
+.credits-header h2 span {
+    color: #d10a04;
+}
+
+
+/* Linha dos Créditos */
+
+.credits-header .title-line {
+    width: 92px;
+
+    height: 5px;
+
+    margin-top: 28px;
+
+    background: #d10a04;
+}
+
+
+/* Cards dos créditos */
+
+.credits-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.credit-card {
+    position: relative;
+
+    min-height: 250px;
+
+    padding: 35px;
+
+    background: #080808;
+
+    border: 1px solid #292929;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Número dos Créditos */
+
+/* .credit-number {
+    display: block;
+
+    margin-bottom: 35px;
+
+    color: #d10a04;
+
+    font-size: 38px;
+
+    font-weight: 900;
+
+    font-style: italic;
+
+    letter-spacing: -2px;
+} */
+
+
+/* Pequena linha dos Créditos */
+
+.credit-number::after {
+    content: "";
+
+    display: block;
+
+    width: 35px;
+
+    height: 3px;
+
+    margin-top: 10px;
+
+    background: #d10a04;
+}
+
+
+/* Título dos Créditos */
+
+.credit-card h3 {
+    margin: 0;
+
+    color: #f5f5f5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+    line-height: 1;
+}
+
+
+/* Texto dos Créditos */
+
+.credit-card p {
+    margin-top: 22px;
+
+    color: #aaa;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* Hover dos Créditos */
+
+.credit-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 4px;
+
+    background: #d10a04;
+
+    transition: width 0.3s ease;
+}
+
+
+/* Seção Final Créditos */
+
+.credits-final {
+    position: relative;
+
+    min-height: 580px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.94) 0%,
+            rgba(0, 0, 0, 0.78) 50%,
+            rgba(0, 0, 0, 0.40) 100%
+        ),
+        url("/images/wallpaper-12.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    border-top: 1px solid #292929;
+}
+
+
+.credits-final-content {
+    width: min(1400px, 82%);
+
+    margin: 0 auto;
+}
+
+
+.credits-final h2 {
+    margin: 25px 0 0;
+
+    color: #f5f5f5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(55px, 6vw, 95px);
+
+    font-weight: 900;
+
+    line-height: 0.9;
+}
+
+
+.credits-final h2 span {
+    color: #d10a04;
+}
+
+
+.credits-final .hero-button {
+    display: inline-flex;
+
+    margin-top: 40px;
+}
+
+
+/* Responsividade Créditos */
+
+@media (max-width: 1000px) {
+
+    .credits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .credits-hero {
+        min-height: 550px;
+    }
+
+    .credits-hero-content,
+    .credits-container,
+    .credits-final-content {
+        width: 88%;
+    }
+
+    .credits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .credit-card {
+        min-height: 220px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .credits-hero-content,
+    .credits-container,
+    .credits-final-content {
+        width: 90%;
+    }
+
+    .credits-hero h1 {
+        font-size: 60px;
+    }
+
+    .credits-hero-text {
+        font-size: 15px;
+    }
+
+    .credits-section {
+        padding: 75px 0 90px;
+    }
+
+    .credits-header h2 {
+        font-size: 42px;
+    }
+
+    .credits-final {
+        min-height: 500px;
+    }
+
+    .credits-final h2 {
+        font-size: 48px;
+    }
+
 }

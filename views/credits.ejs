@@ -1,4 +1,5 @@
-<!-- CRÉDITOS do site -->
+<!-- Página de Créditos -->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -12,12 +13,143 @@
   </head>
 
   <body>
-    <!-- INcluindo a navbar -->
+    <!-- Incluindo a navbar -->
     <%- include("partials/navbar") %>
 
-    <main class="hero-text">
-      <h1 style="text-align: center;">Créditos</h1>
-      <p style="text-align: center;">asd</p>
+    <main class="credits-main">
+      <!-- Hero -->
+
+      <section class="credits-hero">
+        <div class="credits-hero-content">
+          <p class="credits-subtitle">RALLYHUB / CRÉDITOS</p>
+
+          <h1>
+            QUEM<br />
+            <span>FEZ.</span>
+          </h1>
+
+          <p class="credits-hero-text">
+            Conheça os responsáveis pelo desenvolvimento, as tecnologias
+            utilizadas e as fontes que contribuíram para a construção do
+            RALLYHUB.
+          </p>
+        </div>
+      </section>
+
+      <!-- Créditos -->
+
+      <section class="credits-section">
+        <div class="credits-container">
+          <div class="credits-header">
+            <p class="credits-subtitle">DESENVOLVIMENTO</p>
+
+            <h2>
+              POR TRÁS DO<br />
+              <span>RALLYHUB.</span>
+            </h2>
+
+            <div class="title-line"></div>
+          </div>
+
+          <div class="credits-grid">
+            <!-- Desenvolvedor -->
+
+            <div class="credit-card">
+              <h3>DESENVOLVIMENTO</h3>
+
+              <p>
+                Projeto desenvolvido por Matheus Shimada Pereira como atividade
+                acadêmica para Atividade 1 de Node prática, com base nos
+                conhecimentos da matéria Desenvolvimento Web 2 ministrada pelo
+                professor Diego Max no segundo semestre do curso, na FATEC de
+                Registro, São Paulo.
+              </p>
+            </div>
+
+            <!-- Tecnologias -->
+
+            <div class="credit-card">
+              <h3>TECNOLOGIAS</h3>
+
+              <p>
+                Node.js, Express.js, EJS, HTML5 e CSS3 foram utilizados na
+                construção da aplicação, organização das páginas e estilização
+                da interface. Além disso, foram usadas outras funcionalidades de
+                CSS como propriedades personalizadas (--).
+              </p>
+            </div>
+
+            <!-- Conteúdo -->
+
+            <div class="credit-card">
+              <h3>CONTEÚDO</h3>
+
+              <p>
+                As informações apresentadas foram organizadas com o objetivo de
+                apresentar a história, os carros e as competições do mundo do
+                Rally. Todas as informações foram tiradas da internet em sites
+                como Wikipedia, Alamy, Shutterstok e Youtube.
+              </p>
+            </div>
+
+            <!-- Imagens -->
+
+            <div class="credit-card">
+              <h3>IMAGENS</h3>
+
+              <p>
+                Imagens utilizadas no projeto são destinadas à composição visual
+                das páginas e à representação dos carros apresentados no
+                RALLYHUB. O principal site utilizado foi o Alamy e Shutterstok.
+              </p>
+            </div>
+
+            <!-- Referências -->
+
+            <div class="credit-card">
+              <h3>REFERÊNCIAS</h3>
+
+              <p>
+                Conteúdos históricos e informações sobre automobilismo foram
+                utilizados como referência para a elaboração das páginas do
+                projeto. Vale citar a grande inspiração do vídeo "A ERA mais
+                PERIGOSA do AUTOMOBILISMO!!! RALLY GRUPO B!!!" do canal Catálogo
+                das Coisas.
+                <a href="https://www.youtube.com/watch?v=_Z2fHq_11iA&t"
+                  >Veja o vídeo aqui</a
+                >
+              </p>
+            </div>
+
+            <!-- Projeto -->
+
+            <div class="credit-card">
+              <h3>RALLYHUB</h3>
+
+              <p>
+                Um projeto criado para unir desenvolvimento web e a história de
+                alguns dos carros mais marcantes do automobilismo mundial.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Encerramento -->
+
+      <section class="credits-final">
+        <div class="credits-final-content">
+          <p class="credits-subtitle">RALLYHUB</p>
+
+          <h2>
+            OBRIGADO<br />
+            POR<br />
+            <span>VISITAR!</span>
+          </h2>
+
+          <a href="/cars" class="hero-button"> EXPLORAR CARROS </a>
+        </div>
+      </section>
     </main>
 
     <!-- Incluindo o footer -->
